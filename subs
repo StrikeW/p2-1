@@ -1,0 +1,12 @@
+  512  git init
+  513  git add .
+  514  git commit -m 'sa'
+  515  git remote add origin https://github.com/subnr01/p2.git
+  516  git push -u origin master
+  540  git clone https://github.com/Deadbeef-ECE/p2.git
+  545  git remote add origin https://github.com/Deadbeef-ECE/p2.git
+  546  git add .
+  548  git commit -m "adding sub1"
+  549  git push
+  550  history | grep git
+  551  history | grep git >subs
