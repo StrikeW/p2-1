@@ -11,20 +11,42 @@
 
 void *malloc(size_t __size)
 {
-  return NULL;
+	void *ptr = NULL;
+	
+	//mutex_lock;
+	ptr = _malloc(__size);
+	//mutex_unlock;
+
+  	return ptr;
 }
 
 void *calloc(size_t __nelt, size_t __eltsize)
 {
-  return NULL;
+	void *ptr = NULL;
+	
+	//mutex_lock;
+	ptr = _calloc(__nelt, __eltsize);
+	//mutex_unlock;
+
+  	return ptr;
 }
 
 void *realloc(void *__buf, size_t __new_size)
 {
-  return NULL;
+	void *ptr = NULL;
+	
+	//mutex_lock;
+	ptr = _realloc(__buf, __new_size);
+	//mutex_unlock;
+
+  	return ptr;
 }
 
 void free(void *__buf)
 {
-  return;
+	//mutex_lock;
+	_free(__buf);
+	//mutex_unlock;
+
+	return;
 }

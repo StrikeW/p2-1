@@ -6,5 +6,5 @@
 void
 install_autostack(void *stack_high, void *stack_low)
 {
-	return;
+	//return;
 }
