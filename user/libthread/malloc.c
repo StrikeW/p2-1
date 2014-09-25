@@ -11,7 +11,8 @@
 
 void *malloc(size_t __size)
 {
-  return NULL;
+    void *ret = _malloc(__size);
+    return ret;
 }
 
 void *calloc(size_t __nelt, size_t __eltsize)

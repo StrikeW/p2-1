@@ -1,0 +1,50 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+GET_STACK_CURR_BASE	thr_macros.h	12;"	d
+PAGE_ALIGN	thr_macros.h	3;"	d
+SET_STACK_CURR_BASE	thr_macros.h	10;"	d
+THR_ENOMEM	thr_global_data.h	/^   THR_ENOMEM,$/;"	e	enum:__anon1
+THR_ERROR	thr_global_data.h	/^   THR_ERROR = -1,$/;"	e	enum:__anon1
+THR_FORK_ERROR	thr_global_data.h	/^   THR_FORK_ERROR$/;"	e	enum:__anon1
+THR_INTERNALS_H	thr_internals.h	10;"	d
+THR_PTR_ALIGN	thr_macros.h	8;"	d
+THR_SIZE_ALIGN	thr_macros.h	5;"	d
+THR_SUCCESS	thr_global_data.h	/^   THR_SUCCESS,$/;"	e	enum:__anon1
+_node	thr_global_data.h	/^typedef struct _node {$/;"	s
+_pcb	thr_global_data.h	/^typedef struct _pcb {$/;"	s
+_tcb	thr_global_data.h	/^typedef struct _tcb $/;"	s
+calloc	malloc.c	/^void *calloc(size_t __nelt, size_t __eltsize)$/;"	f
+construct_pcb	thr_internals.c	/^pcb_t* construct_pcb()$/;"	f
+construct_tcb	thr_internals.c	/^tcb_t* construct_tcb()$/;"	f
+cur_stack_base_addr	thr_global_data.h	/^uintptr_t cur_stack_base_addr;$/;"	v
+exit_status	thr_global_data.h	/^    void *exit_status;$/;"	m	struct:_tcb
+free	malloc.c	/^void free(void *__buf)$/;"	f
+get_tid	thr_internals.c	/^int get_tid(tcb *thr)$/;"	f
+head	thr_global_data.h	/^tcb_t *head;$/;"	v
+link	thr_global_data.h	/^    node_t *link;$/;"	m	struct:_tcb
+main_tcb	thr_global_data.h	/^    node_t main_tcb;$/;"	m	struct:_pcb
+malloc	malloc.c	/^void *malloc(size_t __size)$/;"	f
+next	thr_global_data.h	/^    struct _node *next;$/;"	m	struct:_node	typeref:struct:_node::_node
+node_t	thr_global_data.h	/^}node_t;$/;"	t	typeref:struct:_node
+panic	panic.c	/^void panic(const char *fmt, ...)$/;"	f
+pcb_t	thr_global_data.h	/^}pcb_t;$/;"	t	typeref:struct:_pcb
+pid	thr_global_data.h	/^    int pid;$/;"	m	struct:_pcb
+ppid	thr_global_data.h	/^    int ppid;$/;"	m	struct:_pcb
+prev	thr_global_data.h	/^    struct _node *prev;$/;"	m	struct:_node	typeref:struct:_node::_node
+realloc	malloc.c	/^void *realloc(void *__buf, size_t __new_size)$/;"	f
+request_size	thr_global_data.h	/^int request_size;$/;"	v
+run_queue_head	thr_global_data.h	/^node_t *run_queue_head;$/;"	v
+run_queue_list	thr_global_data.h	/^node_t run_queue_list;$/;"	v
+stack_start_addr	thr_global_data.h	/^    uintptr_t stack_start_addr;$/;"	m	struct:_tcb
+tcb_t	thr_global_data.h	/^}tcb_t;$/;"	t	typeref:struct:_tcb
+thr_create	thr_create.c	/^int thr_create( void *(*func)(void *), void *args )$/;"	f
+thr_err_t	thr_global_data.h	/^} thr_err_t;$/;"	t	typeref:enum:__anon1
+thr_init	thr_init.c	/^int thr_init( unsigned int size )$/;"	f
+thr_list_head	thr_global_data.h	/^node_t* thr_list_head;$/;"	v
+tid	thr_global_data.h	/^    int tid;$/;"	m	struct:_tcb
+zombie_head	thr_global_data.h	/^node_t *zombie_head;$/;"	v
+zombie_list	thr_global_data.h	/^node_t zombie_list;$/;"	v
