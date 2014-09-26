@@ -1,11 +1,11 @@
 
 
 #define INIT(HEAD) \
-    (HEAD)->next = (HEAD); \
-    (HEAD)->prev = (HEAD);
+    (HEAD).next = (HEAD); \
+    (HEAD).prev = (HEAD);
 
 #define INSERT_REAR(HEAD, NODE) \
-    ((HEAD)->prev)->next = (NODE); \
+    ((HEAD)xx->prev)->next = (NODE); \
     (NODE)->prev = ((HEAD)->prev); \
     (NODE)->next = (HEAD);         \
     (HEAD)->prev = (NODE);
@@ -21,7 +21,7 @@
 
 #define FRONT(HEAD)  ( (HEAD)->next )
 
-#define EMPTY(HEAD)  ( (HEAD)->next == (HEAD) )
+#define EMPTY(LL_HEAD)  ( (HEAD)->next == (HEAD) )
 
 #define FOREACH(HEAD, ITER) \
     for((ITER) = (HEAD)->next;  \
@@ -41,4 +41,4 @@ int empty(list_head *head);
 list_head* delete_front(list_head *head);
 int find(list_head *head, int tid);
 list_head* remove_node(list_head *head, int tid);
-int size(list_head *head);
+int size(list_head *head)

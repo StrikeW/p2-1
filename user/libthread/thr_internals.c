@@ -24,23 +24,29 @@ pcb_t* construct_pcb()
 tcb_t* construct_tcb()
 { 
    lprintf( "DEBUG: construct_tcb start");
-   tcb_t *new_thr = (tcb_t*) malloc( sizeof tcb_t);
+   tcb_t *new_thr = (tcb_t *) malloc( sizeof (tcb_t));
+   
    new_thr->exit_status = NULL;
    new_thr->stack_start_addr = cur_stack_base_addr;
-   LIST_HEAD(new_thr.list);
+   new_thr->list = (list_head*) malloc (sizeof ( list_head));
+   INIT(new_thr->list);
+   //LIST_HEAD(new_thr.list);
    lprintf( "DEBUG: construct_tcb end");
+   
    return new_thr;
 }
 
-int get_tid(tcb *thr)
+int get_tid(tcb_t *thr)
 {
    lprintf( "DEBUG: get_tid start");
+   return 1;
    lprintf( "DEBUG: get_tid end");
 }
 
-int isStackSpaceAvailable();
+int isStackSpaceAvailable()
 {
    lprintf( "DEBUG: sStackSpaceAvailable start");
+   return 1;
    lprintf( "DEBUG: sStackSpaceAvailable end");
 }
 

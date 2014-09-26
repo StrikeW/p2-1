@@ -4,6 +4,8 @@
  */
 #include<thread.h>
 
+
+
 void
 install_autostack(void *stack_high, void *stack_low)
 {
@@ -11,6 +13,7 @@ install_autostack(void *stack_high, void *stack_low)
     main_thr_high_addr =(uintptr_t) stack_high;
     main_thr_low_addr = (uintptr_t) stack_low;
     SET_STACK_CURR_BASE(THR_PTR_ALIGN(stack_low));
+    multi_threading = 0;
     //investigate how to register a handler
     lprintf ("DEBUG install_autostack end");
 }

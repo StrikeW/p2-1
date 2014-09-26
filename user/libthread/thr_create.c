@@ -1,5 +1,5 @@
 #include"thread.h"
-
+#include <syscall_int.h>
 
 int thr_create( void *(*func)(void *), void *args )
 {
@@ -8,16 +8,16 @@ int thr_create( void *(*func)(void *), void *args )
     if (new_pages((void*)cur_stack_base_addr - PAGE_SIZE, PAGE_SIZE) < 0)
     {
         lprintf("PAGE ALLOCATION FAILED");
-        return NULL;
+        return -1;
     } 
   
     if (new_pages((void*)cur_stack_base_addr - 2*PAGE_SIZE, PAGE_SIZE) < 0)
     {
         lprintf("PAGE ALLOCATION for Exception handler FAILED");
-        return NULL;
+        return -1;
     }
    
-    tid = thread_fork(cur_stack_base, func, args);
+    int tid = thread_fork(cur_stack_base_addr, func, args);
     if (tid < 0) {
         return tid;
     }
@@ -35,28 +35,26 @@ int thr_create( void *(*func)(void *), void *args )
 
 void fork_handler(void *(*func) (void *), void *arg)
 {
- 	int status;
+ 	void  *status;
         lprintf ("In thread, need to register handler");
         while(1) 
         {
 	    if (thr_yield(main_thread_id) != 0) {
 		break;
+	   }
         }
        
 
         tcb_t *curr_tcb = construct_tcb();
         curr_tcb->tid = gettid();
+        lprintf ("child tid = %x", curr_tcb->tid);
         curr_tcb->main_thread = 0;
-
-        //Need to implement Push
-
-        curr_tcb->list_head.next = head_thr_list;
-        curr_tcb->list_head.prev = head_thr_list;
-        head_thr_list->next = curr_tcb;
-        head_thr_list->prev = curr_tcb;
+        insert_rear(head_thr_list, curr_tcb->list);	
+    
+	curr_tcb->state = RUNNING;
         status = (func)(arg);
-        swexn((void *)(curr_tcb->stack_start_addr - thread_stack_size),
-              page_fault_handler, NULL, NULL);
+        //swexn((void *)(curr_tcb->stack_start_addr - thread_stack_size),
+          //    page_fault_handler, NULL, NULL);
         make_runnable(main_thread_id);
         thr_exit((void*)status);
 }
