@@ -11,11 +11,12 @@
 #include "variable_queue.h"
 
 typedef struct node {
-	Q_NEW_LINK(node) link;
+	Q_NEW_LINK(node, link);
+	//Q_NEW_LINK(node) link;
 	int data;
 } node_t;
 
-Q_NEW_HEAD(list_t, node);
+Q_NEW_HEAD(list_t,node);
 
 #define LIST_LEN 5
 

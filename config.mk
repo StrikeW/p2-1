@@ -98,7 +98,7 @@ STUDENTTESTS =
 ###########################################################################
 # Object files for your thread library
 ###########################################################################
-THREAD_OBJS = malloc.o panic.o
+THREAD_OBJS = malloc.o panic.o mutex.o
 
 # Thread Group Library Support.
 #
@@ -111,7 +111,12 @@ THREAD_OBJS = malloc.o panic.o
 ###########################################################################
 # Object files for your syscall wrappers
 ###########################################################################
-SYSCALL_OBJS = syscall.o
+SYSCALL_OBJS = print.o vanish.o fork.o set_status.o\
+yield.o deschedule.o make_runnable.o sleep.o task_vanish.o\
+remove_pages.o misbehave.o getchar.o halt.o\
+get_cursor_pos.o gettid.o new_pages.o readfile.o readline.o\
+set_cursor_pos.o swexn.o wait.o exec.o set_term_color.o \
+get_ticks.o
 
 ###########################################################################
 # Object files for your automatic stack handling
