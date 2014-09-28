@@ -1,0 +1,426 @@
+554717315 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
+16615618807 udbg: DEBUG install_autostack start
+16615619622 udbg: DEBUG install_autostack end
+16615622277 udbg: IN main &k = ffffefe4
+16615628814 udbg: main thread tid = 4
+16615631780 udbg: cur_stack_base_addr:ffff7000
+16615655025 udbg: In Parent
+16615658211 udbg: cur_stack_base_addr:ffff5000
+16615681579 udbg: In Parent
+16615684765 udbg: cur_stack_base_addr:ffff3000
+16615708215 udbg: In Parent
+16615711401 udbg: cur_stack_base_addr:ffff1000
+16615734939 udbg: In Parent
+16615738125 udbg: cur_stack_base_addr:fffef000
+16615761755 udbg: In Parent
+16615764941 udbg: cur_stack_base_addr:fffed000
+16615788659 udbg: In Parent
+16615791845 udbg: cur_stack_base_addr:fffeb000
+16615815651 udbg: In Parent
+16615818837 udbg: cur_stack_base_addr:fffe9000
+16615842731 udbg: In Parent
+16615845917 udbg: cur_stack_base_addr:fffe7000
+16615869899 udbg: In Parent
+16615873085 udbg: cur_stack_base_addr:fffe5000
+16615897155 udbg: In Parent
+16615900341 udbg: cur_stack_base_addr:fffe3000
+16615924499 udbg: In Parent
+16615927685 udbg: cur_stack_base_addr:fffe1000
+16615951931 udbg: In Parent
+16615955117 udbg: cur_stack_base_addr:fffdf000
+16615979451 udbg: In Parent
+16615982637 udbg: cur_stack_base_addr:fffdd000
+16616007068 udbg: In Parent
+16616010254 udbg: cur_stack_base_addr:fffdb000
+16616034752 udbg: In Parent
+16616037938 udbg: cur_stack_base_addr:fffd9000
+16616062526 udbg: In Parent
+16616065712 udbg: cur_stack_base_addr:fffd7000
+16616090388 udbg: In Parent
+16616093574 udbg: cur_stack_base_addr:fffd5000
+16616118338 udbg: In Parent
+16616121524 udbg: cur_stack_base_addr:fffd3000
+16616146376 udbg: In Parent
+16616149562 udbg: cur_stack_base_addr:fffd1000
+16616174502 udbg: In Parent
+16616177688 udbg: cur_stack_base_addr:fffcf000
+16616202716 udbg: In Parent
+16616205902 udbg: cur_stack_base_addr:fffcd000
+16616231018 udbg: In Parent
+16616234204 udbg: cur_stack_base_addr:fffcb000
+16616259408 udbg: In Parent
+16616262594 udbg: cur_stack_base_addr:fffc9000
+16616287886 udbg: In Parent
+16616291072 udbg: cur_stack_base_addr:fffc7000
+16616316452 udbg: In Parent
+16616319638 udbg: cur_stack_base_addr:fffc5000
+16616345106 udbg: In Parent
+16616348292 udbg: cur_stack_base_addr:fffc3000
+16616373848 udbg: In Parent
+16616377034 udbg: cur_stack_base_addr:fffc1000
+16616402678 udbg: In Parent
+16616405864 udbg: cur_stack_base_addr:fffbf000
+16616431596 udbg: In Parent
+16616434782 udbg: cur_stack_base_addr:fffbd000
+16616460602 udbg: In Parent
+16616463788 udbg: cur_stack_base_addr:fffbb000
+16616489696 udbg: In Parent
+16616492882 udbg: cur_stack_base_addr:fffb9000
+16616518878 udbg: In Parent
+16616522064 udbg: cur_stack_base_addr:fffb7000
+16616548148 udbg: In Parent
+16616552404 udbg: cur_stack_base_addr:fffb5000
+16616578576 udbg: In Parent
+16616581762 udbg: cur_stack_base_addr:fffb3000
+16616608022 udbg: In Parent
+16616611208 udbg: cur_stack_base_addr:fffb1000
+16616637556 udbg: In Parent
+16616640742 udbg: cur_stack_base_addr:fffaf000
+16616667178 udbg: In Parent
+16616670364 udbg: cur_stack_base_addr:fffad000
+16616696888 udbg: In Parent
+16616700074 udbg: cur_stack_base_addr:fffab000
+16616726686 udbg: In Parent
+16616729872 udbg: cur_stack_base_addr:fffa9000
+16616756572 udbg: In Parent
+16616759758 udbg: cur_stack_base_addr:fffa7000
+16616786546 udbg: In Parent
+16616789732 udbg: cur_stack_base_addr:fffa5000
+16616816608 udbg: In Parent
+16616819794 udbg: cur_stack_base_addr:fffa3000
+16616846758 udbg: In Parent
+16616849944 udbg: cur_stack_base_addr:fffa1000
+16616876996 udbg: In Parent
+16616880182 udbg: cur_stack_base_addr:fff9f000
+16616907322 udbg: In Parent
+16616910508 udbg: cur_stack_base_addr:fff9d000
+16616937736 udbg: In Parent
+16616940922 udbg: cur_stack_base_addr:fff9b000
+16616968238 udbg: In Parent
+16616971424 udbg: cur_stack_base_addr:fff99000
+16616998828 udbg: In Parent
+16617002014 udbg: cur_stack_base_addr:fff97000
+16617029506 udbg: In Parent
+16617032692 udbg: cur_stack_base_addr:fff95000
+16617060272 udbg: In Parent
+16617063458 udbg: cur_stack_base_addr:fff93000
+16617091126 udbg: In Parent
+16617094312 udbg: cur_stack_base_addr:fff91000
+16617122068 udbg: In Parent
+16617125254 udbg: cur_stack_base_addr:fff8f000
+16617153098 udbg: In Parent
+16617156284 udbg: cur_stack_base_addr:fff8d000
+16617184216 udbg: In Parent
+16617187402 udbg: cur_stack_base_addr:fff8b000
+16617215422 udbg: In Parent
+16617218608 udbg: cur_stack_base_addr:fff89000
+16617246716 udbg: In Parent
+16617249902 udbg: cur_stack_base_addr:fff87000
+16617278098 udbg: In Parent
+16617281284 udbg: cur_stack_base_addr:fff85000
+16617309568 udbg: In Parent
+16617312754 udbg: cur_stack_base_addr:fff83000
+16617341126 udbg: In Parent
+16617344312 udbg: cur_stack_base_addr:fff81000
+16617372772 udbg: In Parent
+16617373659 udbg: main thread ends!
+16617376010 udbg: child tid = 6
+16617377160 udbg: In child [6] get the lock
+16617377713 udbg: shared: 1
+16617377994 udbg: unlock!
+16617378770 udbg: in Thread exit
+16617381046 udbg: child tid = 7
+16617382196 udbg: In child [7] get the lock
+16617382749 udbg: shared: 2
+16617383030 udbg: unlock!
+16617383806 udbg: in Thread exit
+16617402754 udbg: child tid = 8
+16617403904 udbg: In child [8] get the lock
+16617404457 udbg: shared: 3
+16617404738 udbg: unlock!
+16617405514 udbg: in Thread exit
+16617424501 udbg: child tid = 9
+16617425651 udbg: In child [9] get the lock
+16617426204 udbg: shared: 4
+16617426485 udbg: unlock!
+16617427261 udbg: in Thread exit
+16617446559 udbg: child tid = 10
+16617447989 udbg: In child [10] get the lock
+16617448542 udbg: shared: 5
+16617448823 udbg: unlock!
+16617449599 udbg: in Thread exit
+16617468935 udbg: child tid = 11
+16617470365 udbg: In child [11] get the lock
+16617470918 udbg: shared: 6
+16617471199 udbg: unlock!
+16617471975 udbg: in Thread exit
+16617491350 udbg: child tid = 12
+16617492780 udbg: In child [12] get the lock
+16617493333 udbg: shared: 7
+16617493614 udbg: unlock!
+16617494390 udbg: in Thread exit
+16617513797 udbg: child tid = 13
+16617515227 udbg: In child [13] get the lock
+16617515780 udbg: shared: 8
+16617516061 udbg: unlock!
+16617516837 udbg: in Thread exit
+16617536276 udbg: child tid = 14
+16617537706 udbg: In child [14] get the lock
+16617538259 udbg: shared: 9
+16617538540 udbg: unlock!
+16617539316 udbg: in Thread exit
+16617558787 udbg: child tid = 15
+16617560217 udbg: In child [15] get the lock
+16617561050 udbg: shared: 10
+16617561331 udbg: unlock!
+16617562107 udbg: in Thread exit
+16617581610 udbg: child tid = 16
+16617583040 udbg: In child [16] get the lock
+16617583873 udbg: shared: 11
+16617584154 udbg: unlock!
+16617584930 udbg: in Thread exit
+16617604465 udbg: child tid = 17
+16617605895 udbg: In child [17] get the lock
+16617606728 udbg: shared: 12
+16617607009 udbg: unlock!
+16617607785 udbg: in Thread exit
+16617627352 udbg: child tid = 18
+16617628782 udbg: In child [18] get the lock
+16617629615 udbg: shared: 13
+16617629896 udbg: unlock!
+16617630672 udbg: in Thread exit
+16617650271 udbg: child tid = 19
+16617651701 udbg: In child [19] get the lock
+16617652534 udbg: shared: 14
+16617652815 udbg: unlock!
+16617653591 udbg: in Thread exit
+16617673222 udbg: child tid = 20
+16617674652 udbg: In child [20] get the lock
+16617675485 udbg: shared: 15
+16617675766 udbg: unlock!
+16617676542 udbg: in Thread exit
+16617696205 udbg: child tid = 21
+16617697635 udbg: In child [21] get the lock
+16617698468 udbg: shared: 16
+16617698749 udbg: unlock!
+16617699525 udbg: in Thread exit
+16617719219 udbg: child tid = 22
+16617720649 udbg: In child [22] get the lock
+16617721482 udbg: shared: 17
+16617721763 udbg: unlock!
+16617722539 udbg: in Thread exit
+16617742271 udbg: child tid = 23
+16617743701 udbg: In child [23] get the lock
+16617744534 udbg: shared: 18
+16617744815 udbg: unlock!
+16617745591 udbg: in Thread exit
+16617765361 udbg: child tid = 24
+16617766791 udbg: In child [24] get the lock
+16617767624 udbg: shared: 19
+16617767905 udbg: unlock!
+16617768681 udbg: in Thread exit
+16617788489 udbg: child tid = 25
+16617789919 udbg: In child [25] get the lock
+16617790752 udbg: shared: 20
+16617791033 udbg: unlock!
+16617791809 udbg: in Thread exit
+16617811655 udbg: child tid = 26
+16617813085 udbg: In child [26] get the lock
+16617813918 udbg: shared: 21
+16617814199 udbg: unlock!
+16617814975 udbg: in Thread exit
+16617834859 udbg: child tid = 27
+16617836289 udbg: In child [27] get the lock
+16617837122 udbg: shared: 22
+16617837403 udbg: unlock!
+16617838179 udbg: in Thread exit
+16617858101 udbg: child tid = 28
+16617859531 udbg: In child [28] get the lock
+16617860364 udbg: shared: 23
+16617860645 udbg: unlock!
+16617861421 udbg: in Thread exit
+16617881381 udbg: child tid = 29
+16617882811 udbg: In child [29] get the lock
+16617883644 udbg: shared: 24
+16617883925 udbg: unlock!
+16617884701 udbg: in Thread exit
+16617904699 udbg: child tid = 30
+16617906129 udbg: In child [30] get the lock
+16617906962 udbg: shared: 25
+16617907243 udbg: unlock!
+16617908019 udbg: in Thread exit
+16617928055 udbg: child tid = 31
+16617929485 udbg: In child [31] get the lock
+16617930318 udbg: shared: 26
+16617930599 udbg: unlock!
+16617931375 udbg: in Thread exit
+16617951449 udbg: child tid = 32
+16617952879 udbg: In child [32] get the lock
+16617953712 udbg: shared: 27
+16617953993 udbg: unlock!
+16617954769 udbg: in Thread exit
+16617974881 udbg: child tid = 33
+16617976311 udbg: In child [33] get the lock
+16617977144 udbg: shared: 28
+16617977425 udbg: unlock!
+16617978201 udbg: in Thread exit
+16617998351 udbg: child tid = 34
+16617999781 udbg: In child [34] get the lock
+16618000614 udbg: shared: 29
+16618000895 udbg: unlock!
+16618001671 udbg: in Thread exit
+16618021859 udbg: child tid = 35
+16618023289 udbg: In child [35] get the lock
+16618024122 udbg: shared: 30
+16618024403 udbg: unlock!
+16618025179 udbg: in Thread exit
+16618045405 udbg: child tid = 36
+16618046835 udbg: In child [36] get the lock
+16618047668 udbg: shared: 31
+16618047949 udbg: unlock!
+16618048725 udbg: in Thread exit
+16618068989 udbg: child tid = 37
+16618070419 udbg: In child [37] get the lock
+16618071252 udbg: shared: 32
+16618071533 udbg: unlock!
+16618072309 udbg: in Thread exit
+16618108998 udbg: child tid = 5
+16618110148 udbg: In child [5] get the lock
+16618110981 udbg: shared: 33
+16618111262 udbg: unlock!
+16618112038 udbg: in Thread exit
+16618132377 udbg: child tid = 38
+16618133807 udbg: In child [38] get the lock
+16618134640 udbg: shared: 34
+16618134921 udbg: unlock!
+16618135697 udbg: in Thread exit
+16618155948 udbg: child tid = 39
+16618157378 udbg: In child [39] get the lock
+16618158211 udbg: shared: 35
+16618158492 udbg: unlock!
+16618159268 udbg: in Thread exit
+16618179683 udbg: child tid = 40
+16618181113 udbg: In child [40] get the lock
+16618181946 udbg: shared: 36
+16618182227 udbg: unlock!
+16618183003 udbg: in Thread exit
+16618203456 udbg: child tid = 41
+16618204886 udbg: In child [41] get the lock
+16618205719 udbg: shared: 37
+16618206000 udbg: unlock!
+16618206776 udbg: in Thread exit
+16618227267 udbg: child tid = 42
+16618228697 udbg: In child [42] get the lock
+16618229530 udbg: shared: 38
+16618229811 udbg: unlock!
+16618230587 udbg: in Thread exit
+16618251116 udbg: child tid = 43
+16618252546 udbg: In child [43] get the lock
+16618253379 udbg: shared: 39
+16618253660 udbg: unlock!
+16618254436 udbg: in Thread exit
+16618275003 udbg: child tid = 44
+16618276433 udbg: In child [44] get the lock
+16618277266 udbg: shared: 40
+16618277547 udbg: unlock!
+16618278323 udbg: in Thread exit
+16618298928 udbg: child tid = 45
+16618300358 udbg: In child [45] get the lock
+16618301191 udbg: shared: 41
+16618301472 udbg: unlock!
+16618302248 udbg: in Thread exit
+16618322891 udbg: child tid = 46
+16618324321 udbg: In child [46] get the lock
+16618325154 udbg: shared: 42
+16618325435 udbg: unlock!
+16618326211 udbg: in Thread exit
+16618346892 udbg: child tid = 47
+16618348322 udbg: In child [47] get the lock
+16618349155 udbg: shared: 43
+16618349436 udbg: unlock!
+16618350212 udbg: in Thread exit
+16618370931 udbg: child tid = 48
+16618372361 udbg: In child [48] get the lock
+16618373194 udbg: shared: 44
+16618373475 udbg: unlock!
+16618374251 udbg: in Thread exit
+16618395008 udbg: child tid = 49
+16618396438 udbg: In child [49] get the lock
+16618397271 udbg: shared: 45
+16618397552 udbg: unlock!
+16618398328 udbg: in Thread exit
+16618419123 udbg: child tid = 50
+16618420553 udbg: In child [50] get the lock
+16618421386 udbg: shared: 46
+16618421667 udbg: unlock!
+16618422443 udbg: in Thread exit
+16618443276 udbg: child tid = 51
+16618444706 udbg: In child [51] get the lock
+16618445539 udbg: shared: 47
+16618445820 udbg: unlock!
+16618446596 udbg: in Thread exit
+16618467467 udbg: child tid = 52
+16618468897 udbg: In child [52] get the lock
+16618469730 udbg: shared: 48
+16618470011 udbg: unlock!
+16618470787 udbg: in Thread exit
+16618491696 udbg: child tid = 53
+16618493126 udbg: In child [53] get the lock
+16618493959 udbg: shared: 49
+16618494240 udbg: unlock!
+16618495016 udbg: in Thread exit
+16618515963 udbg: child tid = 54
+16618517393 udbg: In child [54] get the lock
+16618518226 udbg: shared: 50
+16618518507 udbg: unlock!
+16618519283 udbg: in Thread exit
+16618540268 udbg: child tid = 55
+16618541698 udbg: In child [55] get the lock
+16618542531 udbg: shared: 51
+16618542812 udbg: unlock!
+16618543588 udbg: in Thread exit
+16618554128 udbg: child tid = 56
+16618555558 udbg: In child [56] get the lock
+16618556391 udbg: shared: 52
+16618556672 udbg: unlock!
+16618557448 udbg: in Thread exit
+16618561605 udbg: child tid = 57
+16618563035 udbg: In child [57] get the lock
+16618563868 udbg: shared: 53
+16618564149 udbg: unlock!
+16618564925 udbg: in Thread exit
+16618569115 udbg: child tid = 58
+16618570545 udbg: In child [58] get the lock
+16618571378 udbg: shared: 54
+16618571659 udbg: unlock!
+16618572435 udbg: in Thread exit
+16618576657 udbg: child tid = 59
+16618578087 udbg: In child [59] get the lock
+16618578920 udbg: shared: 55
+16618579201 udbg: unlock!
+16618579977 udbg: in Thread exit
+16618584231 udbg: child tid = 60
+16618585661 udbg: In child [60] get the lock
+16618586494 udbg: shared: 56
+16618586775 udbg: unlock!
+16618587551 udbg: in Thread exit
+16618591837 udbg: child tid = 61
+16618593267 udbg: In child [61] get the lock
+16618594100 udbg: shared: 57
+16618594381 udbg: unlock!
+16618595157 udbg: in Thread exit
+16618599475 udbg: child tid = 62
+16618600905 udbg: In child [62] get the lock
+16618601738 udbg: shared: 58
+16618602019 udbg: unlock!
+16618602795 udbg: in Thread exit
+16618607145 udbg: child tid = 63
+16618608575 udbg: In child [63] get the lock
+16618609408 udbg: shared: 59
+16618609689 udbg: unlock!
+16618610465 udbg: in Thread exit
+16618614847 udbg: child tid = 64
+16618616277 udbg: In child [64] get the lock
+16618617110 udbg: shared: 60
+16618617391 udbg: unlock!
+16618618167 udbg: in Thread exit

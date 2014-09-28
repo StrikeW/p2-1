@@ -1,0 +1,15 @@
+user/libthread/_list.o: user/libthread/_list.c 410user/libstdio/stdio.h \
+ 410user/inc/stddef.h 410user/inc/types.h 410user/inc/stdarg.h \
+ user/libthread/_list.h 410user/libsimics/simics.h
+
+410user/libstdio/stdio.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/stdarg.h:
+
+user/libthread/_list.h:
+
+410user/libsimics/simics.h:
