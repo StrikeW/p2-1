@@ -100,7 +100,8 @@ STUDENTTESTS = t
 ###########################################################################
 THREAD_OBJS = malloc.o panic.o _list.o thread_exit.o \
      thread_fork.o thr_init.o thr_create.o thr_internals.o \
-	 xchg.o mutex.o cond_variable.o spin_lock.o sem.o 
+	 xchg.o mutex.o cond_variable.o spin_lock.o sem.o \
+	 rwlock.o
 # Thread Group Library Support.
 #
 # Since libthrgrp.a depends on your thread library, the "buildable blank

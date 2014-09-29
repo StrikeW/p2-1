@@ -5,8 +5,8 @@
 #ifndef _SEM_TYPE_H
 #define _SEM_TYPE_H
 
-#include <mutex_type.h>
-#include <cond_type.h>
+#include "mutex_type.h"
+#include "cond_type.h"
 
 #define SEM_DESTROY 0
 #define SEM_EXIST 1

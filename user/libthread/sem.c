@@ -1,4 +1,3 @@
-
 #include <syscall.h>
 #include <thread.h>
 #include <stdlib.h>
@@ -15,6 +14,7 @@
  *  @return 0: success
  */
 int sem_init( sem_t *sem, int count ){
+	assert(sem != NULL);
 	sem->count = count;
 	sem->status = SEM_EXIST;
 
