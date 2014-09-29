@@ -2,6 +2,7 @@
 #include <thread.h>
 #include <stdlib.h>
 #include <assert.h>
+
 #include "variable_queue.h"
 #include "cond_type.h"
 #include "spin_lock.h"
@@ -15,6 +16,10 @@ extern int atom_xchg(int*, int);
 // void cond_broadcast( cond_t *cv );
 //Q_NEW_HEAD(list_t, cond);
 
+/* 
+ * @return zero: success 
+ *         negative: error
+ */
 int cond_init(cond_t *cv) {
 	assert(cv != NULL);
 	

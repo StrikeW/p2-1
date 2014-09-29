@@ -10,6 +10,7 @@
 #include <assert.h>
 #include "variable_queue.h"
 #include "spin_lock.h"
+#include "mutex_type.h"
 
 #define COND_DESTORY 0
 #define COND_EXIST 1
@@ -30,5 +31,7 @@ waiting_list_t waiting_list;
 
 int cond_init(cond_t *cond_var);
 void cond_destroy(cond_t *cond_var);
+void cond_wait(cond_t *cv, mutex_t *mp);
+void cond_signal(cond_t *cv);
 
 #endif /* _COND_TYPE_H */

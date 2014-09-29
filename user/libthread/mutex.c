@@ -81,47 +81,7 @@ void mutex_destroy(mutex_t *mp){
 		else
 			continue;
 	}
-
-	// wait until no mutex is needed 
-	// Not sure this is ok
-	// while(1){
-	// 	while(atom_xchg(&mp->lock_flag, LOCK) != UNLOCK)
-	// 		yield(-1);
-	// 	if( mp->lock_flag != 0){
-	// 		mp->lock_flag = UNLOCK;
-	// 		yield(mp->tid);
-	// 	}else{
-	// 		mp->lock_flag = UNLOCK;
-	// 		break;
-	// 	}
-	// }
-
 }
-/** @brief Count how many threads want to acquire mutex_lock
- *  
- *  @param  mp: mutex
- *  @return void
- */
-// void inline count_mutex_acquire(mutex_t *mp){
-// 	while( atom_xchg(&mp->lock_flag, LOCK) != UNLOCK){
-// 		yield(-1);
-// 	}
-// 	mp->lock_num++;
-// 	mp->lock_flag = UNLOCK;
-// }
-
-/** @brief Count how many threads want to release the mutex_lock
- *  
- *  @param  mp: mutex
- *  @return void
- */
-// void inline count_mutex_release(mutex_t *mp){
-// 	while( atom_xchg(&mp->lock_flag, LOCK) != UNLOCK){
-// 		yield(-1);
-// 	}
-// 	mp->lock_num--;
-// 	mp->lock_flag = UNLOCK;
-// }
 
 
 
