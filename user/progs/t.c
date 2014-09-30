@@ -16,7 +16,7 @@ void *child(void *param);
 
 #define STACK_SIZE 3072
 
-#define NTHREADS 60
+#define NTHREADS 1 
 #define SOMETIMES 4
 
 

@@ -1,0 +1,39 @@
+user/libthread/_list.o: user/libthread/_list.c 410user/libstdio/stdio.h \
+ 410user/inc/stddef.h 410user/inc/types.h 410user/inc/stdarg.h \
+ 410user/libsimics/simics.h 410user/inc/thread.h \
+ user/libthread/thr_internals.h user/libthread/thr_global_data.h \
+ 410user/inc/stdint.h user/libthread/thr_macros.h spec/syscall.h \
+ spec/ureg.h user/libthread/_list.h 410user/libstdlib/stdlib.h \
+ 410user/inc/malloc.h user/inc/mutex_type.h
+
+410user/libstdio/stdio.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/stdarg.h:
+
+410user/libsimics/simics.h:
+
+410user/inc/thread.h:
+
+user/libthread/thr_internals.h:
+
+user/libthread/thr_global_data.h:
+
+410user/inc/stdint.h:
+
+user/libthread/thr_macros.h:
+
+spec/syscall.h:
+
+spec/ureg.h:
+
+user/libthread/_list.h:
+
+410user/libstdlib/stdlib.h:
+
+410user/inc/malloc.h:
+
+user/inc/mutex_type.h:

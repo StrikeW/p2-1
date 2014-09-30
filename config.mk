@@ -98,7 +98,7 @@ STUDENTTESTS = t
 ###########################################################################
 # Object files for your thread library
 ###########################################################################
-THREAD_OBJS = malloc.o panic.o _list.o thread_exit.o \
+THREAD_OBJS = malloc.o panic.o _list.o thr_exit.o \
      thread_fork.o thr_init.o thr_create.o thr_internals.o \
 	 xchg.o mutex.o cond_variable.o spin_lock.o sem.o \
 	 rwlock.o

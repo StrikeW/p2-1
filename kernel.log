@@ -1,0 +1,21 @@
+554995952 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
+48881619211 udbg: DEBUG install_autostack start
+48881620026 udbg: DEBUG install_autostack end
+48881622680 udbg: IN main &k = ffffefe8
+48881623364 udbg: DEBUG:  thr_init start
+48881629993 udbg: main thread tid = 4
+48881630614 udbg: DEBUG:  thr_init end
+48881631744 udbg: before lock: mp->lock:0
+48881632603 udbg: Got lock! mp->lock:1
+48881633337 udbg: DEBUG:  thr_create start
+48881657479 udbg: DEBUG:  after thread fork
+48881657804 udbg: In Parent
+48881659382 udbg: In thread, need to register handler
+48881660097 udbg:  parent id is 4
+48881661587 udbg: before lock: mp->lock:0
+48881662446 udbg: Got lock! mp->lock:1
+48881663553 udbg: In child [5] get the lock
+48881664106 udbg: shared: 1
+48881664387 udbg: unlock!
+48881664876 udbg: thread finished
+48881665123 udbg: VANISH

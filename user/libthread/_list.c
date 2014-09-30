@@ -3,8 +3,8 @@
  */
 
 #include<stdio.h>
-#include <_list.h>
 #include<simics.h>
+#include<thread.h>
 
 int
 init(list_head *head)
@@ -31,6 +31,10 @@ delete_front(list_head *head)
 void
 insert_rear(list_head *head, list_head *node)
 {
+    if ( head == NULL) {
+	head = node;
+	return;
+    }
     INSERT_REAR(head, node);
 }
 
@@ -51,6 +55,14 @@ list_head *
 remove_node(list_head *head, int tid)
 {
     lprintf(" Remove node be implemented");
+     
+    list_head *iter;
+    FOREACH(head, iter) {
+       if(((tcb_t*)iter)->tid == tid){
+           REMOVE_NODE(iter);
+           return iter;
+        }
+    }
     return NULL;
 }
 

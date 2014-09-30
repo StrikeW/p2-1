@@ -18,6 +18,9 @@
     ((NODE)->next)->prev = (NODE)->prev; \
     ((NODE)->prev)->next = (NODE)->next;
 
+#define FOREACH(HEAD, ITER) \
+    for((ITER) = (HEAD)->next;  \
+      (ITER) != (HEAD); (ITER) = (ITER)->next )
 
 #define FRONT(HEAD)  ( (HEAD)->next )
 

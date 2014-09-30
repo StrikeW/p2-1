@@ -23,6 +23,6 @@ int get_tid(tcb_t *thr);
 int isStackSpaceAvailable();
 
 
-int thread_fork(uintptr_t stack_base, void *(*func) (void *), void *arg);
+int thread_fork(uintptr_t stack_base, void *(*func) (void *), void *arg, tcb_t *curr_tcb);
 
 #endif /* THR_INTERNALS_H */

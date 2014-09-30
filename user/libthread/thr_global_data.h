@@ -5,23 +5,30 @@
 #include<syscall.h>
 #include<_list.h>
 #include<stdlib.h>
+#include "mutex_type.h"
 
 //NEED to remove this, only for debugging
 int main_thread_id;
+///NEED to remove this, only for debugging
+
+
 uintptr_t cur_stack_base_addr;
 list_head *head_thr_list;
 uintptr_t main_thr_high_addr;
 uintptr_t main_thr_low_addr;
 int multi_threading;
 int thread_stack_size;
+int parent;
+mutex_t thread_list;
+list_head *join_queue;
+
 
 
 typedef enum
 {
    INIT = 0,
-   RUNNING,
    RUNNABLE,
-   SLEEP,
+   BLOCKED,
    ZOMBIE
 } exec_state_t;
 
@@ -34,7 +41,7 @@ typedef struct _tcb
     int parentid;
     uintptr_t stack_start_addr;
     exec_state_t state;
-    int main_thread;   
+    int join_tid;
 }tcb_t;
 
 
@@ -49,8 +56,8 @@ typedef enum
 
 
 
-
 tcb_t *head;
+
 
 
 
