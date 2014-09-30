@@ -8,7 +8,7 @@
 #include "spin_lock.h"
 #include "mutex_type.h"
 
-extern int atom_xchg(int*, int);
+//extern int atom_xchg(int*, int);
 // int cond_init( cond_t *cv );
 // void cond_destroy( cond_t *cv );
 // void cond_wait( cond_t *cv, mutex_t *mp );
@@ -42,7 +42,7 @@ void cond_destroy(cond_t *cv)
  		if(waiting_list.size > 0){
  			/* Unlock the spinlock and waitting for size = 0 */
  			spin_lock_release(&cv->spinlock);
- 			continue;
+ 			yield(-1);
  		}
     	if(waiting_list.size == 0){
     		/* Set the cond_variable's status as destroyed */
@@ -67,13 +67,13 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 		return;
 	}
 	
-	//allocate mem for the thread want to grab resource
+	//allocate mem for the thread want to grasp resource
 	cond_t *node_ptr = malloc(sizeof(cond_t));
 
 //********** NOt sure to put spin_lock at which place!!!!!!!
 
 	/* Lock the queue to store the thread info */
-	spin_lock_request(&cv->spinlock);
+	//spin_lock_request(&cv->spinlock);
 
 	/* Initialize the struct to store the thread's it and 
 	 * prepare to insert */
@@ -83,7 +83,7 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 //********** May be here???????!!!!!!!
 
 	/* Lock the queue to store the thread info */
-	//spin_lock_request(&cv->spinlock);
+	spin_lock_request(&cv->spinlock);
 
 	/* Insert into the tail of the waitting list */
 	Q_INSERT_TAIL(&waiting_list, node_ptr, cond_link);
@@ -129,6 +129,7 @@ void cond_signal(cond_t *cv){
 
 	/* Got one waitting thread from the queue, unlock the queue */
 	tid = node_ptr->tid;
+
 	spin_lock_release(&cv->spinlock);
 
 	/* Make that thread runnable */
@@ -159,9 +160,10 @@ void cond_broadcast(cond_t *cv){
 			Q_REMOVE(&waiting_list, node_ptr, cond_link);
 			/* Make the thread runnable */
 			make_runnable(node_ptr->tid);
+			/* After move the node, free space */
+			free(node_ptr);
 		}
 	}
-
 	/* Unlock the thread */
 	spin_lock_release(&cv->spinlock);
 

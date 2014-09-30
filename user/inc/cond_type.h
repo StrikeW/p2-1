@@ -33,5 +33,6 @@ int cond_init(cond_t *cond_var);
 void cond_destroy(cond_t *cond_var);
 void cond_wait(cond_t *cv, mutex_t *mp);
 void cond_signal(cond_t *cv);
+void cond_broadcast(cond_t *cv);
 
 #endif /* _COND_TYPE_H */
