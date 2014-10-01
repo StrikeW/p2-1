@@ -17,17 +17,18 @@
 
 #define DEFAULT_TID -1
 
+/* Init the head of the waitting list */
+Q_NEW_HEAD(waiting_list_t, cond);
+
 typedef struct cond {
 	Q_NEW_LINK(cond) cond_link;
 	spinlock_t spinlock;
 	int tid;
 	int status;
-} cond_t;
 
-/* Init the head of the waitting list */
-Q_NEW_HEAD(waiting_list_t, cond);
-/* The waitting list for threads */
-waiting_list_t waiting_list;
+	/* The waitting list for threads */
+	waiting_list_t waiting_list;
+} cond_t;
 
 int cond_init(cond_t *cond_var);
 void cond_destroy(cond_t *cond_var);

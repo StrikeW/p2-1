@@ -22,7 +22,7 @@ int cond_init(cond_t *cv) {
 	cv->tid = DEFAULT_TID;
 	cv->status = COND_EXIST;
 
-	Q_INIT_HEAD(&waiting_list);
+	Q_INIT_HEAD(&cv->waiting_list);
 	return 0;
 }
 
@@ -32,12 +32,12 @@ void cond_destroy(cond_t *cv)
     while(1){
     	spin_lock_request(&cv->spinlock);
     	/* If there are threads on the waitting list */
- 		if(waiting_list.size > 0){
+ 		if(cv->waiting_list.size > 0){
  			/* Unlock the spinlock and waitting for size = 0 */
  			spin_lock_release(&cv->spinlock);
  			yield(-1);
  		}
-    	if(waiting_list.size == 0){
+    	if(cv->waiting_list.size == 0){
     		/* Set the cond_variable's status as destroyed */
     		cv->status = COND_DESTORY;
     		/* Unlock the spinlock and break */
@@ -75,14 +75,15 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 	spin_lock_request(&cv->spinlock);
 
 	/* Insert into the tail of the waitting list */
-	Q_INSERT_TAIL(&waiting_list, node_ptr, cond_link);
-	lprintf("cond waiting_list addr [%p]",&waiting_list);
+	Q_INSERT_TAIL(&cv->waiting_list, node_ptr, cond_link);
+	lprintf("cond waiting_list addr [%p]",&cv->waiting_list);
+
 #ifdef DEBUG_COND
 	lprintf("DEBUG COND!");
 	cond_t *tmp = NULL;
-    tmp = Q_GET_FRONT(&waiting_list);
+    tmp = Q_GET_FRONT(&cv->waiting_list);
     while(tmp){
-        if(tmp == Q_GET_FRONT(&waiting_list)){
+        if(tmp == Q_GET_FRONT(&cv->waiting_list)){
             lprintf("Start:tid[%d]addr[%p]->", tmp->tid, tmp);
         }
         else{
@@ -92,16 +93,19 @@ void cond_wait(cond_t *cv, mutex_t *mp){
     }
 	
 #endif
+
+
+
 	/* Release the mutex mp passed in */
 	mutex_unlock(mp);
 
 	/* Release the lock of the queue */
 	spin_lock_release(&cv->spinlock);
 
+lprintf("Deschedule thread[%d]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", node_ptr->tid);
+
 	/* Deschedule the thread who has inserted into the queue */
 	deschedule(&status);
-
-	lprintf("Deschedule thread[%d]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", node_ptr->tid);
 
 	/* Lock the passed mutex mp again */
 	mutex_lock(mp);
@@ -119,7 +123,7 @@ void cond_signal(cond_t *cv){
 	spin_lock_request(&cv->spinlock);
 
 	/* Get the head node(thread) in the queue */
-	node_ptr = Q_GET_FRONT(&waiting_list);
+	node_ptr = Q_GET_FRONT(&cv->waiting_list);
 
 	/* If there are no thread in the queue, unlock and return */
 	if(node_ptr == NULL){
@@ -130,7 +134,7 @@ void cond_signal(cond_t *cv){
 	else{
 		/* Q_REMOVE only delete the info of prev and next 
 		 * which we won't use them anymore */
-		Q_REMOVE(&waiting_list, node_ptr, cond_link);
+		Q_REMOVE(&cv->waiting_list, node_ptr, cond_link);
 		lprintf("REmove thread[%d][addr:%p] from cond waitting list!!!!",node_ptr->tid, node_ptr);
 	}
 
@@ -157,22 +161,52 @@ void cond_broadcast(cond_t *cv){
 
 	/* Lock the queue */
 	spin_lock_request(&cv->spinlock);
-
+#ifdef DEBUG_COND
+	lprintf("DEBUG COND!");
+	cond_t *tmp = NULL;
+    tmp = Q_GET_FRONT(&cv->waiting_list);
+    while(tmp){
+        if(tmp == Q_GET_FRONT(&cv->waiting_list)){
+            lprintf("Start:tid[%d]addr[%p]->", tmp->tid, tmp);
+        }
+        else{
+            lprintf("->tid[%d]addr[%p]", tmp->tid, tmp);
+        }
+        tmp = Q_GET_NEXT(tmp, cond_link);
+    }
+	
+#endif
+    
 	while(1){
 		/* Wake up all the thread in the queue */
-		node_ptr = Q_GET_FRONT(&waiting_list);
+		node_ptr = Q_GET_FRONT(&cv->waiting_list);
 		if(node_ptr == NULL){
 			lprintf("In cond_broadcast: no threads!");
 			break;
 		}/* Remove the node from the waitting list */
 		else{
-			Q_REMOVE(&waiting_list, node_ptr, cond_link);
+			Q_REMOVE(&cv->waiting_list, node_ptr, cond_link);
 			/* Make the thread runnable */
 			make_runnable(node_ptr->tid);
 			/* After move the node, free space */
 			free(node_ptr);
 		}
 	}
+#ifdef DEBUG_COND
+	lprintf("AFter broadcast DEBUG COND!");
+	cond_t *tmp2 = NULL;
+    tmp2 = Q_GET_FRONT(&cv->waiting_list);
+    while(tmp2){
+        if(tmp2 == Q_GET_FRONT(&cv->waiting_list)){
+            lprintf("Start:tid[%d]addr[%p]->", tmp2->tid, tmp2);
+        }
+        else{
+            lprintf("->tid[%d]addr[%p]", tmp2->tid, tmp2);
+        }
+        tmp = Q_GET_NEXT(tmp2, cond_link);
+    }
+	
+#endif
 	/* Unlock the thread */
 	spin_lock_release(&cv->spinlock);
 
