@@ -41,7 +41,7 @@ typedef enum
     RUNNABLE,
     BLOCKED,
     ZOMBIE,
-    DEAD
+    EXIT_SUCC
 } exec_state_t;
 
 
@@ -79,6 +79,7 @@ typedef enum
 #define DEFAULT_JOIN_TID -2
 
 #define THR_JOIN_FAIL -1
+#define THR_JOIN_SUCC 0
 
 #define PAGE_ALIGN(addr) ((addr) & ~ (PAGE_SIZE -1))
 

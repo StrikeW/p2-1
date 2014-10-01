@@ -142,10 +142,10 @@ int thr_join( int tid, void **statusp ){
         return THR_JOIN_FAIL;
     }
 
-    if(tmp_tcb->state == DEAD){
-        lprintf("Cannot join a ZOMBINE, MAN !! ");
+    if(tmp_tcb->state == EXIT_SUCC){
+        lprintf("Joined thread already exit!! Won't wait anymore ");
         mutex_unlock(&tmp_tcb->join_exit_mtx);
-        return THR_JOIN_FAIL;
+        return THR_JOIN_SUCC;
     }
 
     if(tmp_tcb->state == RUNNABLE){
@@ -159,7 +159,7 @@ int thr_join( int tid, void **statusp ){
     mutex_unlock(&tmp_tcb->join_exit_mtx);
 
 
-    return 0;
+    return THR_JOIN_SUCC;
 }
 
 void thr_exit( void *status )
@@ -188,7 +188,7 @@ void thr_exit( void *status )
     mutex_lock(&exit_thr->join_exit_mtx);
     
     /* Set the thread as dead */
-    exit_thr->state = DEAD;
+    exit_thr->state = EXIT_SUCC;
     exit_thr->exit_status = status;
     lprintf("exit_thr->join_tid:%d",exit_thr->join_tid);
 

@@ -1,24 +1,169 @@
-558799554 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
-150772630307 udbg: DEBUG install_autostack start
-150772631122 udbg: DEBUG install_autostack end
-150772631818 udbg: DEBUG:  thr_init start
-150772638123 udbg: main thread tid = 4
-150772638744 udbg: DEBUG:  thr_init end
-150772639642 udbg: DEBUG:  thr_create start
-150772663525 udbg: DEBUG:  after thread fork
-150772664570 udbg: In Parent, child tid is 5
-150772667510 udbg:  cur_stack_base_addr is ffff5000
-150772668195 udbg: DEBUG:  thr_create end
-150772669603 udbg:  parent id is 4
-150772670380 udbg: child tid = 5
-150772672034 udbg: In thr_join, now thr[5], join_tid[4]
-150772677409 kdbg: Page fault: Invalid read from non-present page at address 0x0000002c
-150772688831 kdbg: Thread: 5
-150772691080 kdbg: Registers:
-150772697245 kdbg: eax: 0x00000028, ebx: 0x00000028, ecx: 0xffff6e98,
-150772711652 kdbg: edx: 0xffff6f9c, edi: 0x00000005, esi: 0x00000004,
-150772728912 kdbg: ebp: 0xffff6f9c, esp: 0xffff6f90, eip: 0x010006b0,
-150772745223 kdbg:  ss:     0x002b,  cs:     0x0023,  ds:     0x002b,
-150772757212 kdbg:  es:     0x002b,  fs:     0x002b,  gs:     0x002b,
-150772767609 kdbg: eflags: 0x00000286
-150791561584 udbg: Cannot found the target!
+559963488 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
+43995628022 udbg: DEBUG install_autostack start
+43995628837 udbg: DEBUG install_autostack end
+43995629537 udbg: DEBUG:  thr_init start
+43995636020 udbg: main thread tid = 4
+43995636641 udbg: DEBUG:  thr_init end
+43995638358 udbg: (^_^)_agility_drill: START__TYPE_COMPLETE
+43995639945 udbg: DEBUG:  thr_create start
+43995663916 udbg: DEBUG:  after thread fork
+43995664961 udbg: In Parent, child tid is 5
+43995667901 udbg:  cur_stack_base_addr is ffff5000
+43995668586 udbg: DEBUG:  thr_create end
+43995669556 udbg: DEBUG:  thr_create start
+43995693666 udbg: DEBUG:  after thread fork
+43995694715 udbg: In Parent, child tid is 6
+43995697655 udbg:  cur_stack_base_addr is ffff3000
+43995698340 udbg: DEBUG:  thr_create end
+43995699326 udbg: DEBUG:  thr_create start
+43995723534 udbg: DEBUG:  after thread fork
+43995724583 udbg: In Parent, child tid is 7
+43995727523 udbg:  cur_stack_base_addr is ffff1000
+43995728208 udbg: DEBUG:  thr_create end
+43995729210 udbg: DEBUG:  thr_create start
+43995753522 udbg: DEBUG:  after thread fork
+43995754571 udbg: In Parent, child tid is 8
+43995757511 udbg:  cur_stack_base_addr is fffef000
+43995758196 udbg: DEBUG:  thr_create end
+43995759214 udbg: DEBUG:  thr_create start
+43995783634 udbg: DEBUG:  after thread fork
+43995784683 udbg: In Parent, child tid is 9
+43995787623 udbg:  cur_stack_base_addr is fffed000
+43995788308 udbg: DEBUG:  thr_create end
+43995789342 udbg: DEBUG:  thr_create start
+43995813866 udbg: DEBUG:  after thread fork
+43995815195 udbg: In Parent, child tid is 10
+43995818135 udbg:  cur_stack_base_addr is fffeb000
+43995818820 udbg: DEBUG:  thr_create end
+43995819870 udbg: DEBUG:  thr_create start
+43995844498 udbg: DEBUG:  after thread fork
+43995845827 udbg: In Parent, child tid is 11
+43995848767 udbg:  cur_stack_base_addr is fffe9000
+43995849452 udbg: DEBUG:  thr_create end
+43995852706 udbg: cond waiting_list addr [0x010055b0]
+43995853083 udbg: DEBUG COND!
+43995855941 udbg: Start:tid[4]addr[0x01006318]->
+43995857240 udbg:  parent id is 4
+43995858017 udbg: child tid = 5
+43995862100 udbg: (^_^)_agility_drill:Starting chase thread with creation number 0
+43995863366 udbg:  parent id is 4
+43995864143 udbg: child tid = 6
+43995868228 udbg: (^_^)_agility_drill:Starting chase thread with creation number 1
+43996717102 udbg:  parent id is 4
+43996717879 udbg: child tid = 7
+43996721964 udbg: (^_^)_agility_drill:Starting chase thread with creation number 2
+43998716968 udbg:  parent id is 4
+43998717745 udbg: child tid = 8
+43998721830 udbg: (^_^)_agility_drill:Starting chase thread with creation number 3
+44000716834 udbg:  parent id is 4
+44000717611 udbg: child tid = 9
+44000721696 udbg: (^_^)_agility_drill:Starting chase thread with creation number 4
+44002716700 udbg:  parent id is 4
+44002717757 udbg: child tid = 10
+44002721842 udbg: (^_^)_agility_drill:Starting chase thread with creation number 5
+44004716566 udbg:  parent id is 4
+44004717623 udbg: child tid = 11
+44004721708 udbg: (^_^)_agility_drill:Starting chase thread with creation number 6
+44006720132 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 0
+44006722868 udbg: before signal, cv addr:0x010055e0
+44006726602 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44006728111 udbg: UNLOCK AFTERT tg->lock
+44006728604 udbg: thread finished
+44006731743 udbg: Got the exit_tid[5] addr[0x01006090]
+44006732403 udbg: Thread 5 exit
+44006733305 udbg: exit_thr->join_tid:-2
+44006735962 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44006737770 udbg: In thr_join, now thr[4], join_tid[5]
+44006740842 udbg: Got the target tid[5] addr[0x01006090]
+44006742250 udbg: Joined thread already exit!! Won't wait anymore 
+44006745510 udbg: cond waiting_list addr [0x010055b0]
+44006745887 udbg: DEBUG COND!
+44006748745 udbg: Start:tid[4]addr[0x01006318]->
+44006753782 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 1
+44006756518 udbg: before signal, cv addr:0x010055e0
+44006760252 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44006761746 udbg: UNLOCK AFTERT tg->lock
+44006762239 udbg: thread finished
+44006765382 udbg: Got the exit_tid[6] addr[0x010060f0]
+44006766042 udbg: Thread 6 exit
+44006766944 udbg: exit_thr->join_tid:-2
+44006786275 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44006788083 udbg: In thr_join, now thr[4], join_tid[6]
+44006791159 udbg: Got the target tid[6] addr[0x010060f0]
+44006792567 udbg: Joined thread already exit!! Won't wait anymore 
+44006795829 udbg: cond waiting_list addr [0x010055b0]
+44006796206 udbg: DEBUG COND!
+44006799064 udbg: Start:tid[4]addr[0x01006318]->
+44006804139 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 2
+44006806875 udbg: before signal, cv addr:0x010055e0
+44006810609 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44006812103 udbg: UNLOCK AFTERT tg->lock
+44006812596 udbg: thread finished
+44006815744 udbg: Got the exit_tid[7] addr[0x01006150]
+44006816404 udbg: Thread 7 exit
+44006817306 udbg: exit_thr->join_tid:-2
+44006836643 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44006838451 udbg: In thr_join, now thr[4], join_tid[7]
+44006841532 udbg: Got the target tid[7] addr[0x01006150]
+44006842940 udbg: Joined thread already exit!! Won't wait anymore 
+44006846204 udbg: cond waiting_list addr [0x010055b0]
+44006846581 udbg: DEBUG COND!
+44006849439 udbg: Start:tid[4]addr[0x01006318]->
+44006854514 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 3
+44006857250 udbg: before signal, cv addr:0x010055e0
+44006860984 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44006862478 udbg: UNLOCK AFTERT tg->lock
+44006862971 udbg: thread finished
+44006866124 udbg: Got the exit_tid[8] addr[0x010061b0]
+44006866784 udbg: Thread 8 exit
+44006867686 udbg: exit_thr->join_tid:-2
+44006887030 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44006888838 udbg: In thr_join, now thr[4], join_tid[8]
+44006891924 udbg: Got the target tid[8] addr[0x010061b0]
+44006893332 udbg: Joined thread already exit!! Won't wait anymore 
+44006896598 udbg: cond waiting_list addr [0x010055b0]
+44006896975 udbg: DEBUG COND!
+44006899833 udbg: Start:tid[4]addr[0x01006318]->
+44010719866 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 4
+44010722602 udbg: before signal, cv addr:0x010055e0
+44010726336 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44010727830 udbg: UNLOCK AFTERT tg->lock
+44010728323 udbg: thread finished
+44010731481 udbg: Got the exit_tid[9] addr[0x01006210]
+44010732141 udbg: Thread 9 exit
+44010733043 udbg: exit_thr->join_tid:-2
+44010752386 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44010754194 udbg: In thr_join, now thr[4], join_tid[9]
+44010757285 udbg: Got the target tid[9] addr[0x01006210]
+44010758693 udbg: Joined thread already exit!! Won't wait anymore 
+44010761961 udbg: cond waiting_list addr [0x010055b0]
+44010762338 udbg: DEBUG COND!
+44010765196 udbg: Start:tid[4]addr[0x01006318]->
+44010770236 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 5
+44010772972 udbg: before signal, cv addr:0x010055e0
+44010776706 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44010778200 udbg: UNLOCK AFTERT tg->lock
+44010778693 udbg: thread finished
+44010782136 udbg: Got the exit_tid[10] addr[0x01006270]
+44010783076 udbg: Thread 10 exit
+44010783978 udbg: exit_thr->join_tid:-2
+44010803327 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44010805415 udbg: In thr_join, now thr[4], join_tid[10]
+44010808791 udbg: Got the target tid[10] addr[0x01006270]
+44010810199 udbg: Joined thread already exit!! Won't wait anymore 
+44010813469 udbg: cond waiting_list addr [0x010055b0]
+44010813846 udbg: DEBUG COND!
+44010816704 udbg: Start:tid[4]addr[0x01006318]->
+44010821774 udbg: (^_^)_agility_drill:Successful finish for thread with creation number 6
+44010824510 udbg: before signal, cv addr:0x010055e0
+44010828244 udbg: REmove thread[4][addr:0x01006318] from cond waitting list!!!!
+44010829737 udbg: UNLOCK AFTERT tg->lock
+44010830230 udbg: thread finished
+44010833678 udbg: Got the exit_tid[11] addr[0x010062d0]
+44010834618 udbg: Thread 11 exit
+44010835520 udbg: exit_thr->join_tid:-2
+44010854875 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+44010856963 udbg: In thr_join, now thr[4], join_tid[11]
+44010860344 udbg: Got the target tid[11] addr[0x010062d0]
+44010861752 udbg: Joined thread already exit!! Won't wait anymore 
+44010863348 udbg: (^_^)_agility_drill: END__SUCCESS

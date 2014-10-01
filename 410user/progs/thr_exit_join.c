@@ -23,8 +23,8 @@ int main()
   (void) thr_create(waiter, (void *) thr_getid());
   
   sleep(10); /* optional, of course!! */
-  char *x = 'i';
-  thr_exit((void *)x);
+
+  thr_exit((void *)'i');
 
   while(1)
 	continue; /* placate compiler portably */
