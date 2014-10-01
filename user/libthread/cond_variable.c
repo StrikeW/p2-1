@@ -8,13 +8,7 @@
 #include "spin_lock.h"
 #include "mutex_type.h"
 
-//extern int atom_xchg(int*, int);
-// int cond_init( cond_t *cv );
-// void cond_destroy( cond_t *cv );
-// void cond_wait( cond_t *cv, mutex_t *mp );
-// void cond_signal( cond_t *cv );
-// void cond_broadcast( cond_t *cv );
-//Q_NEW_HEAD(list_t, cond);
+#define DEBUG_COND
 
 /* 
  * @return zero: success 
@@ -27,8 +21,7 @@ int cond_init(cond_t *cv) {
 	
 	cv->tid = DEFAULT_TID;
 	cv->status = COND_EXIST;
-	// Q_NEW_HEAD(waiting_list_t, cond);
-	// waiting_list_t waiting_list;
+
 	Q_INIT_HEAD(&waiting_list);
 	return 0;
 }
@@ -70,8 +63,6 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 	//allocate mem for the thread want to grasp resource
 	cond_t *node_ptr = malloc(sizeof(cond_t));
 
-//********** NOt sure to put spin_lock at which place!!!!!!!
-
 	/* Lock the queue to store the thread info */
 	//spin_lock_request(&cv->spinlock);
 
@@ -80,14 +71,27 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 	Q_INIT_ELEM(node_ptr, cond_link);
 	node_ptr->tid = gettid();
 
-//********** May be here???????!!!!!!!
-
 	/* Lock the queue to store the thread info */
 	spin_lock_request(&cv->spinlock);
 
 	/* Insert into the tail of the waitting list */
 	Q_INSERT_TAIL(&waiting_list, node_ptr, cond_link);
-
+	lprintf("cond waiting_list addr [%p]",&waiting_list);
+#ifdef DEBUG_COND
+	lprintf("DEBUG COND!");
+	cond_t *tmp = NULL;
+    tmp = Q_GET_FRONT(&waiting_list);
+    while(tmp){
+        if(tmp == Q_GET_FRONT(&waiting_list)){
+            lprintf("Start:tid[%d]addr[%p]->", tmp->tid, tmp);
+        }
+        else{
+            lprintf("->tid[%d]addr[%p]", tmp->tid, tmp);
+        }
+        tmp = Q_GET_NEXT(tmp, cond_link);
+    }
+	
+#endif
 	/* Release the mutex mp passed in */
 	mutex_unlock(mp);
 
@@ -96,6 +100,8 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 
 	/* Deschedule the thread who has inserted into the queue */
 	deschedule(&status);
+
+	lprintf("Deschedule thread[%d]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", node_ptr->tid);
 
 	/* Lock the passed mutex mp again */
 	mutex_lock(mp);
@@ -125,6 +131,7 @@ void cond_signal(cond_t *cv){
 		/* Q_REMOVE only delete the info of prev and next 
 		 * which we won't use them anymore */
 		Q_REMOVE(&waiting_list, node_ptr, cond_link);
+		lprintf("REmove thread[%d][addr:%p] from cond waitting list!!!!",node_ptr->tid, node_ptr);
 	}
 
 	/* Got one waitting thread from the queue, unlock the queue */
@@ -133,8 +140,10 @@ void cond_signal(cond_t *cv){
 	spin_lock_release(&cv->spinlock);
 
 	/* Make that thread runnable */
-	while(make_runnable(tid) < 0)
+	while(make_runnable(tid) < 0){
+		lprintf("ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!");
 		yield(tid);
+	}
 
 	/* Free */
 	free(node_ptr);

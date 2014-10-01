@@ -1,4 +1,5 @@
-
+#ifndef _LIST_H_
+#define _LIST_H_
 
 #define INIT(HEAD) \
     (HEAD)->next = (HEAD); \
@@ -40,8 +41,11 @@ typedef struct _list_head {
 
 int init(list_head *head);
 void insert_rear(list_head *head, list_head *node);
-int empty(list_head *head);
+int _empty(list_head *head);
 list_head* delete_front(list_head *head);
 int find(list_head *head, int tid);
 list_head* remove_node(list_head *head, int tid);
 int size(list_head *head);
+
+
+#endif

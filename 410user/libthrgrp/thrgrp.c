@@ -102,9 +102,13 @@ static void *thrgrp_bottom(void *in_data){
   if(tg->zombie_out == NULL)
     tg->zombie_out = &(data->qel);
 
+  lprintf("before signal, cv addr:%p",&tg->cv);
+
   /* signal a waiter to come clean up our zombie */
   cond_signal(&(tg->cv));
   mutex_unlock(&(tg->lock));
+
+  lprintf("UNLOCK AFTERT tg->lock");
 
   /* if we return with ret, should exit with ret */
   return ret;

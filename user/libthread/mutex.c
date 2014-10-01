@@ -38,13 +38,13 @@ void mutex_lock(mutex_t *mp){
 		return;
 	}
 	while(1){
-		lprintf("before lock: mp->lock:%d", mp->lock);
+		//lprintf("before lock: mp->lock:%d", mp->lock);
 		if(  atom_xchg(&mp->lock, LOCK) == UNLOCK){
-			lprintf("Got lock! mp->lock:%d",mp->lock);
+		//	lprintf("Got lock! mp->lock:%d",mp->lock);
 			break;
 		}
 		else{
-			lprintf("Waiting for lock!");
+		//	lprintf("Waiting for lock!");
 			continue;
 		}
 

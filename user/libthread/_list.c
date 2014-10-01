@@ -2,9 +2,9 @@
  *  @brief Internal thread queue library implementation.
  */
 
-#include<stdio.h>
-#include<simics.h>
-#include<thread.h>
+#include <stdio.h>
+#include <simics.h>
+#include <thread.h>
 
 int
 init(list_head *head)
@@ -32,14 +32,14 @@ void
 insert_rear(list_head *head, list_head *node)
 {
     if ( head == NULL) {
-	head = node;
-	return;
+	   head = node;
+	   return;
     }
     INSERT_REAR(head, node);
 }
 
 int
-empty(list_head *head)
+_empty(list_head *head)
 {
     return EMPTY(head);
 }

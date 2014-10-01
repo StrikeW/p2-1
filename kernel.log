@@ -1,0 +1,24 @@
+558799554 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
+150772630307 udbg: DEBUG install_autostack start
+150772631122 udbg: DEBUG install_autostack end
+150772631818 udbg: DEBUG:  thr_init start
+150772638123 udbg: main thread tid = 4
+150772638744 udbg: DEBUG:  thr_init end
+150772639642 udbg: DEBUG:  thr_create start
+150772663525 udbg: DEBUG:  after thread fork
+150772664570 udbg: In Parent, child tid is 5
+150772667510 udbg:  cur_stack_base_addr is ffff5000
+150772668195 udbg: DEBUG:  thr_create end
+150772669603 udbg:  parent id is 4
+150772670380 udbg: child tid = 5
+150772672034 udbg: In thr_join, now thr[5], join_tid[4]
+150772677409 kdbg: Page fault: Invalid read from non-present page at address 0x0000002c
+150772688831 kdbg: Thread: 5
+150772691080 kdbg: Registers:
+150772697245 kdbg: eax: 0x00000028, ebx: 0x00000028, ecx: 0xffff6e98,
+150772711652 kdbg: edx: 0xffff6f9c, edi: 0x00000005, esi: 0x00000004,
+150772728912 kdbg: ebp: 0xffff6f9c, esp: 0xffff6f90, eip: 0x010006b0,
+150772745223 kdbg:  ss:     0x002b,  cs:     0x0023,  ds:     0x002b,
+150772757212 kdbg:  es:     0x002b,  fs:     0x002b,  gs:     0x002b,
+150772767609 kdbg: eflags: 0x00000286
+150791561584 udbg: Cannot found the target!

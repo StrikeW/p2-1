@@ -82,7 +82,7 @@ int main(int argc, char **argv)
 					free(curArg);
 				}
 		}
-
+	lprintf("SUCCESS!!!");
 	return 0;
 	
 }

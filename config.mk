@@ -85,7 +85,9 @@ UPDATE_METHOD = afs
 # A list of the test programs you want compiled in from the 410user/progs
 # directory
 #
-410TESTS = startle
+410TESTS = startle agility_drill cat cvar_test cyclone \
+excellent join_specific_test juggle racer mutex_destroy_test \
+paraguay thr_exit_join
 
 ###########################################################################
 # Test programs you have written which you wish to run
@@ -98,7 +100,7 @@ STUDENTTESTS = t
 ###########################################################################
 # Object files for your thread library
 ###########################################################################
-THREAD_OBJS = malloc.o panic.o _list.o thr_exit.o \
+THREAD_OBJS = malloc.o panic.o _list.o \
      thread_fork.o thr_init.o thr_create.o thr_internals.o \
 	 xchg.o mutex.o cond_variable.o spin_lock.o sem.o \
 	 rwlock.o
@@ -108,7 +110,7 @@ THREAD_OBJS = malloc.o panic.o _list.o thr_exit.o \
 # P3" we give you can't build libthrgrp.a.  Once you install your thread
 # library and fix THREAD_OBJS above, uncomment this line to enable building
 # libthrgrp.a:
-#410USER_LIBS_EARLY += libthrgrp.a
+410USER_LIBS_EARLY += libthrgrp.a
 
 ###########################################################################
 # Object files for your syscall wrappers

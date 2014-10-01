@@ -8,4 +8,5 @@ int thr_create( void *(*func)(void *), void *args );
 void fork_handler(void *(*func) (void *), void *arg, tcb_t*);
 void thr_exit( void *status );
 int thr_yield( int tid );
+int thr_getid(void);
 void page_fault_handler(int *ret_addr, void *arg, ureg_t *ureg);

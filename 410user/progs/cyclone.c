@@ -89,6 +89,8 @@ int main(int argc, char *argv[])
 
 	REPORT_MISC("ERR: thr_exit() returned.");
 	REPORT_END_FAIL;
+
+	lprintf("WTF");
 	thr_exit((void *)-80);
 	return (-80); // getting increasingly desperate here
 }
