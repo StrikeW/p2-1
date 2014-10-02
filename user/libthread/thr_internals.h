@@ -48,17 +48,16 @@ typedef enum
 typedef struct _tcb 
 {
     //list_head *list;
-    void *exit_status;
     int tid;
     int parentid;
+    int join_tid;
+    void *exit_status;
 
     uintptr_t stack_start_addr;
     exec_state_t state;
 
     cond_t join_cond;
     mutex_t join_exit_mtx;
-    int join_tid;
-
     Q_NEW_LINK(_tcb) tcb_link;
 }tcb_t;
 
@@ -96,8 +95,6 @@ typedef enum
 #define MULTI_THREADING_DISABLE()  ( multi_threading = 0 ;)  
 
 #define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1;)
-
-tcb_t *head;
 
 void set_cur_stack_base_addr( void *stack_low);
 

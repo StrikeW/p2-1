@@ -16,8 +16,6 @@ int thr_init( unsigned int size )
     
     main_thread_id = curr_tcb->tid = gettid();
 
-    //head_thr_list = curr_tcb->list;
-
     Q_INIT_HEAD(&tcb_list);
 
     lprintf ("main thread tid = %x",main_thread_id);

@@ -8,7 +8,7 @@
 #include "spin_lock.h"
 #include "mutex_type.h"
 
-#define DEBUG_COND
+//#define DEBUG_COND
 
 /* 
  * @return zero: success 
@@ -76,7 +76,7 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 
 	/* Insert into the tail of the waitting list */
 	Q_INSERT_TAIL(&cv->waiting_list, node_ptr, cond_link);
-	lprintf("cond waiting_list addr [%p]",&cv->waiting_list);
+	//lprintf("cond waiting_list addr [%p]",&cv->waiting_list);
 
 #ifdef DEBUG_COND
 	lprintf("DEBUG COND!");
@@ -102,7 +102,7 @@ void cond_wait(cond_t *cv, mutex_t *mp){
 	/* Release the lock of the queue */
 	spin_lock_release(&cv->spinlock);
 
-lprintf("Deschedule thread[%d]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", node_ptr->tid);
+//lprintf("Deschedule thread[%d]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", node_ptr->tid);
 
 	/* Deschedule the thread who has inserted into the queue */
 	deschedule(&status);
@@ -135,7 +135,7 @@ void cond_signal(cond_t *cv){
 		/* Q_REMOVE only delete the info of prev and next 
 		 * which we won't use them anymore */
 		Q_REMOVE(&cv->waiting_list, node_ptr, cond_link);
-		lprintf("REmove thread[%d][addr:%p] from cond waitting list!!!!",node_ptr->tid, node_ptr);
+		//lprintf("REmove thread[%d][addr:%p] from cond waitting list!!!!",node_ptr->tid, node_ptr);
 	}
 
 	/* Got one waitting thread from the queue, unlock the queue */
@@ -176,7 +176,7 @@ void cond_broadcast(cond_t *cv){
     }
 	
 #endif
-    
+
 	while(1){
 		/* Wake up all the thread in the queue */
 		node_ptr = Q_GET_FRONT(&cv->waiting_list);
@@ -192,21 +192,7 @@ void cond_broadcast(cond_t *cv){
 			free(node_ptr);
 		}
 	}
-#ifdef DEBUG_COND
-	lprintf("AFter broadcast DEBUG COND!");
-	cond_t *tmp2 = NULL;
-    tmp2 = Q_GET_FRONT(&cv->waiting_list);
-    while(tmp2){
-        if(tmp2 == Q_GET_FRONT(&cv->waiting_list)){
-            lprintf("Start:tid[%d]addr[%p]->", tmp2->tid, tmp2);
-        }
-        else{
-            lprintf("->tid[%d]addr[%p]", tmp2->tid, tmp2);
-        }
-        tmp = Q_GET_NEXT(tmp2, cond_link);
-    }
-	
-#endif
+
 	/* Unlock the thread */
 	spin_lock_release(&cv->spinlock);
 

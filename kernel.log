@@ -1,567 +1,636 @@
-559922309 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
-69897625154 udbg: DEBUG install_autostack start
-69897625969 udbg: DEBUG install_autostack end
-69897626668 udbg: DEBUG:  thr_init start
-69897632973 udbg: main thread tid = 4
-69897633594 udbg: DEBUG:  thr_init end
-69897634559 udbg: DEBUG:  thr_create start
-69897658692 udbg: DEBUG:  after thread fork
-69897659737 udbg: In Parent, child tid is 5
-69897662677 udbg:  cur_stack_base_addr is ffff5000
-69897663362 udbg: DEBUG:  thr_create end
-69897664572 udbg: before thr_yield(sleeper_tid: 5)
+559613245 kdbg: pathos v2(Sep 18 2014 13:30:45), Michael Sullivan and Elly Jones
+89296653262 udbg: DEBUG install_autostack start
+89296654077 udbg: DEBUG install_autostack end
+89296655179 udbg: DEBUG:  thr_init start
+89296661710 udbg: main thread tid = 4
+89296662331 udbg: DEBUG:  thr_init end
+89296718345 udbg: Thread count = 1
 
-69897665926 udbg:  parent id is 4
-69897666703 udbg: child tid = 5
-69897669809 udbg: cond waiting_list addr [0x01004f34]
-69897670186 udbg: DEBUG COND!
-69897673043 udbg: Start:tid[5]addr[0x010050b0]->
-69897674734 udbg: Deschedule thread[5]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897676250 udbg: DEBUG:  thr_create start
-69897700350 udbg: DEBUG:  after thread fork
-69897701399 udbg: In Parent, child tid is 6
-69897704339 udbg:  cur_stack_base_addr is ffff3000
-69897705024 udbg: DEBUG:  thr_create end
-69897706164 udbg:  parent id is 4
-69897706941 udbg: child tid = 6
-69897707972 udbg: 6 sleeping! on A
-69897711071 udbg: cond waiting_list addr [0x01004f74]
-69897711448 udbg: DEBUG COND!
-69897714305 udbg: Start:tid[6]addr[0x01005140]->
-69897715996 udbg: Deschedule thread[6]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897717531 udbg: DEBUG:  thr_create start
-69897741737 udbg: DEBUG:  after thread fork
-69897742786 udbg: In Parent, child tid is 7
-69897745726 udbg:  cur_stack_base_addr is ffff1000
-69897746411 udbg: DEBUG:  thr_create end
-69897747551 udbg:  parent id is 4
-69897748328 udbg: child tid = 7
-69897749359 udbg: 7 sleeping! on A
-69897752485 udbg: cond waiting_list addr [0x01004f74]
-69897752862 udbg: DEBUG COND!
-69897755719 udbg: Start:tid[6]addr[0x01005140]->
-69897758413 udbg: ->tid[7]addr[0x010051d0]
-69897760103 udbg: Deschedule thread[7]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897761662 udbg: DEBUG:  thr_create start
-69897785980 udbg: DEBUG:  after thread fork
-69897787029 udbg: In Parent, child tid is 8
-69897789969 udbg:  cur_stack_base_addr is fffef000
-69897790654 udbg: DEBUG:  thr_create end
-69897791794 udbg:  parent id is 4
-69897792571 udbg: child tid = 8
-69897793602 udbg: 8 sleeping! on A
-69897796752 udbg: cond waiting_list addr [0x01004f74]
-69897797129 udbg: DEBUG COND!
-69897799986 udbg: Start:tid[6]addr[0x01005140]->
-69897802680 udbg: ->tid[7]addr[0x010051d0]
-69897805373 udbg: ->tid[8]addr[0x01005260]
-69897807063 udbg: Deschedule thread[8]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897808646 udbg: DEBUG:  thr_create start
-69897833080 udbg: DEBUG:  after thread fork
-69897834129 udbg: In Parent, child tid is 9
-69897837069 udbg:  cur_stack_base_addr is fffed000
-69897837754 udbg: DEBUG:  thr_create end
-69897838912 udbg:  parent id is 4
-69897839689 udbg: child tid = 9
-69897840720 udbg: 9 sleeping! on A
-69897843894 udbg: cond waiting_list addr [0x01004f74]
-69897844271 udbg: DEBUG COND!
-69897847128 udbg: Start:tid[6]addr[0x01005140]->
-69897849822 udbg: ->tid[7]addr[0x010051d0]
-69897852515 udbg: ->tid[8]addr[0x01005260]
-69897855208 udbg: ->tid[9]addr[0x010052f0]
-69897856898 udbg: Deschedule thread[9]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897858505 udbg: DEBUG:  thr_create start
-69897883051 udbg: DEBUG:  after thread fork
-69897884380 udbg: In Parent, child tid is 10
-69897887320 udbg:  cur_stack_base_addr is fffeb000
-69897888005 udbg: DEBUG:  thr_create end
-69897889145 udbg:  parent id is 4
-69897890202 udbg: child tid = 10
-69897891513 udbg: 10 sleeping! on A
-69897894711 udbg: cond waiting_list addr [0x01004f74]
-69897895088 udbg: DEBUG COND!
-69897897945 udbg: Start:tid[6]addr[0x01005140]->
-69897900639 udbg: ->tid[7]addr[0x010051d0]
-69897903332 udbg: ->tid[8]addr[0x01005260]
-69897906025 udbg: ->tid[9]addr[0x010052f0]
-69897908998 udbg: ->tid[10]addr[0x01005380]
-69897910968 udbg: Deschedule thread[10]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897912599 udbg: DEBUG:  thr_create start
-69897937257 udbg: DEBUG:  after thread fork
-69897938586 udbg: In Parent, child tid is 11
-69897941526 udbg:  cur_stack_base_addr is fffe9000
-69897942211 udbg: DEBUG:  thr_create end
-69897943351 udbg:  parent id is 4
-69897944408 udbg: child tid = 11
-69897945719 udbg: 11 sleeping! on A
-69897948941 udbg: cond waiting_list addr [0x01004f74]
-69897949318 udbg: DEBUG COND!
-69897952175 udbg: Start:tid[6]addr[0x01005140]->
-69897954869 udbg: ->tid[7]addr[0x010051d0]
-69897957562 udbg: ->tid[8]addr[0x01005260]
-69897960255 udbg: ->tid[9]addr[0x010052f0]
-69897963228 udbg: ->tid[10]addr[0x01005380]
-69897966201 udbg: ->tid[11]addr[0x01005410]
-69897968171 udbg: Deschedule thread[11]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69897969826 udbg: DEBUG:  thr_create start
-69897994596 udbg: DEBUG:  after thread fork
-69897995925 udbg: In Parent, child tid is 12
-69897998865 udbg:  cur_stack_base_addr is fffe7000
-69897999550 udbg: DEBUG:  thr_create end
-69898000690 udbg:  parent id is 4
-69898001747 udbg: child tid = 12
-69898003058 udbg: 12 sleeping! on A
-69898006304 udbg: cond waiting_list addr [0x01004f74]
-69898006681 udbg: DEBUG COND!
-69898009538 udbg: Start:tid[6]addr[0x01005140]->
-69898012232 udbg: ->tid[7]addr[0x010051d0]
-69898014925 udbg: ->tid[8]addr[0x01005260]
-69898017618 udbg: ->tid[9]addr[0x010052f0]
-69898020591 udbg: ->tid[10]addr[0x01005380]
-69898023564 udbg: ->tid[11]addr[0x01005410]
-69898026537 udbg: ->tid[12]addr[0x010054a0]
-69898028507 udbg: Deschedule thread[12]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69898030186 udbg: DEBUG:  thr_create start
-69898055068 udbg: DEBUG:  after thread fork
-69898056397 udbg: In Parent, child tid is 13
-69898059337 udbg:  cur_stack_base_addr is fffe5000
-69898060022 udbg: DEBUG:  thr_create end
-69898061180 udbg:  parent id is 4
-69898062237 udbg: child tid = 13
-69898063548 udbg: 13 sleeping! on A
-69898066818 udbg: cond waiting_list addr [0x01004f74]
-69898067195 udbg: DEBUG COND!
-69898070052 udbg: Start:tid[6]addr[0x01005140]->
-69898072746 udbg: ->tid[7]addr[0x010051d0]
-69898075439 udbg: ->tid[8]addr[0x01005260]
-69898078132 udbg: ->tid[9]addr[0x010052f0]
-69898081105 udbg: ->tid[10]addr[0x01005380]
-69898084078 udbg: ->tid[11]addr[0x01005410]
-69898087051 udbg: ->tid[12]addr[0x010054a0]
-69898090024 udbg: ->tid[13]addr[0x01005530]
-69898091994 udbg: Deschedule thread[13]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69898093697 udbg: DEBUG:  thr_create start
-69898118691 udbg: DEBUG:  after thread fork
-69898120020 udbg: In Parent, child tid is 14
-69898122960 udbg:  cur_stack_base_addr is fffe3000
-69898123645 udbg: DEBUG:  thr_create end
-69898124785 udbg:  parent id is 4
-69898125842 udbg: child tid = 14
-69898127153 udbg: 14 sleeping! on A
-69898130447 udbg: cond waiting_list addr [0x01004f74]
-69898130824 udbg: DEBUG COND!
-69898133681 udbg: Start:tid[6]addr[0x01005140]->
-69898136375 udbg: ->tid[7]addr[0x010051d0]
-69898139068 udbg: ->tid[8]addr[0x01005260]
-69898141761 udbg: ->tid[9]addr[0x010052f0]
-69898144734 udbg: ->tid[10]addr[0x01005380]
-69898147707 udbg: ->tid[11]addr[0x01005410]
-69898150680 udbg: ->tid[12]addr[0x010054a0]
-69898153653 udbg: ->tid[13]addr[0x01005530]
-69898156626 udbg: ->tid[14]addr[0x010055c0]
-69898158596 udbg: Deschedule thread[14]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69898160323 udbg: DEBUG:  thr_create start
-69898185429 udbg: DEBUG:  after thread fork
-69898186758 udbg: In Parent, child tid is 15
-69898189698 udbg:  cur_stack_base_addr is fffe1000
-69898190383 udbg: DEBUG:  thr_create end
-69898191523 udbg:  parent id is 4
-69898192580 udbg: child tid = 15
-69898193891 udbg: 15 sleeping! on A
-69898197209 udbg: cond waiting_list addr [0x01004f74]
-69898197586 udbg: DEBUG COND!
-69898200443 udbg: Start:tid[6]addr[0x01005140]->
-69898203137 udbg: ->tid[7]addr[0x010051d0]
-69898205830 udbg: ->tid[8]addr[0x01005260]
-69898208523 udbg: ->tid[9]addr[0x010052f0]
-69898211496 udbg: ->tid[10]addr[0x01005380]
-69898214469 udbg: ->tid[11]addr[0x01005410]
-69898217442 udbg: ->tid[12]addr[0x010054a0]
-69898220415 udbg: ->tid[13]addr[0x01005530]
-69898223388 udbg: ->tid[14]addr[0x010055c0]
-69898226361 udbg: ->tid[15]addr[0x01005650]
-69898228331 udbg: Deschedule thread[15]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69898229661 udbg: DEBUG:  thr_create start
-69898254871 udbg: DEBUG:  after thread fork
-69898256200 udbg: In Parent, child tid is 16
-69898259140 udbg:  cur_stack_base_addr is fffdf000
-69898259825 udbg: DEBUG:  thr_create end
-69898261395 udbg: before thr_yield(instigator_tid: 16)
+89296719117 udbg: DEBUG:  thr_create start
+89296743072 udbg: DEBUG:  after thread fork
+89296744117 udbg: In Parent, child tid is 5
+89296747057 udbg:  cur_stack_base_addr is ffff5000
+89296747742 udbg: DEBUG:  thr_create end
+89296748510 udbg: DEBUG:  thr_create start
+89296772575 udbg: DEBUG:  after thread fork
+89296773624 udbg: In Parent, child tid is 6
+89296776564 udbg:  cur_stack_base_addr is ffff3000
+89296777249 udbg: DEBUG:  thr_create end
+89296778901 udbg: In thr_join, now thr[4], join_tid[5]
+89296781973 udbg: Got the target tid[5] addr[0x01006060]
+89296783410 udbg: Your Joined thread is still running, waiting now!
+89296784886 udbg:  parent id is 4
+89296785663 udbg: child tid = 5
+89296786529 udbg: Thread count = 2
 
-69898262730 udbg:  parent id is 4
-69898263787 udbg: child tid = 16
-69898267953 udbg: cond waiting_list addr [0xffffefc4]
-69898268330 udbg: DEBUG COND!
-69898271187 udbg: Start:tid[4]addr[0x010056c8]->
-69898272878 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69906981188 udbg: instigator broadcasting on A
-69906984922 udbg: REmove thread[6][addr:0x01005140] from cond waitting list!!!!
-69906986566 udbg: instigator broadcasting on B
-69906987196 udbg: No blocked threads!
-69906988629 udbg: 6 woken up on A!
-69906989259 udbg: No blocked threads!
-69906990021 udbg: 6 sleeping! on B
-69906993112 udbg: cond waiting_list addr [0x01004ef4]
-69906993489 udbg: DEBUG COND!
-69906996346 udbg: Start:tid[6]addr[0x01005140]->
-69906998037 udbg: Deschedule thread[6]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69916980518 udbg: instigator broadcasting on A
-69916984252 udbg: REmove thread[7][addr:0x010051d0] from cond waitting list!!!!
-69916985881 udbg: instigator broadcasting on B
-69916989615 udbg: REmove thread[6][addr:0x01005140] from cond waitting list!!!!
-69916991822 udbg: 6 woken up on B!
-69916992234 udbg: DEBUG COND!
-69916995092 udbg: Start:tid[8]addr[0x01005260]->
-69916997786 udbg: ->tid[9]addr[0x010052f0]
-69917000759 udbg: ->tid[10]addr[0x01005380]
-69917003732 udbg: ->tid[11]addr[0x01005410]
-69917006705 udbg: ->tid[12]addr[0x010054a0]
-69917009678 udbg: ->tid[13]addr[0x01005530]
-69917012651 udbg: ->tid[14]addr[0x010055c0]
-69917015624 udbg: ->tid[15]addr[0x01005650]
-69917022832 udbg: In cond_broadcast: no threads!
-69917023641 udbg: AFter broadcast DEBUG COND!
-69917024406 udbg: 6 sleeping! on A
-69917027497 udbg: cond waiting_list addr [0x01004f74]
-69917027874 udbg: DEBUG COND!
-69917030731 udbg: Start:tid[6]addr[0x01005140]->
-69917032422 udbg: Deschedule thread[6]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917034156 udbg: 15 woken up on A!
-69917034786 udbg: No blocked threads!
-69917035828 udbg: 15 sleeping! on B
-69917038943 udbg: cond waiting_list addr [0x01004ef4]
-69917039320 udbg: DEBUG COND!
-69917042457 udbg: Start:tid[15]addr[0x010051d0]->
-69917044428 udbg: Deschedule thread[15]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917046162 udbg: 14 woken up on A!
-69917050176 udbg: REmove thread[15][addr:0x010051d0] from cond waitting list!!!!
-69917051991 udbg: 14 sleeping! on B
-69917055106 udbg: cond waiting_list addr [0x01004ef4]
-69917055483 udbg: DEBUG COND!
-69917058620 udbg: Start:tid[14]addr[0x010051d0]->
-69917060591 udbg: Deschedule thread[14]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917062325 udbg: 15 woken up on B!
-69917062737 udbg: DEBUG COND!
-69917065595 udbg: Start:tid[6]addr[0x01005140]->
-69917067281 udbg: In cond_broadcast: no threads!
-69917068090 udbg: AFter broadcast DEBUG COND!
-69917069135 udbg: 15 sleeping! on A
-69917072226 udbg: cond waiting_list addr [0x01004f74]
-69917072603 udbg: DEBUG COND!
-69917075740 udbg: Start:tid[15]addr[0x01005140]->
-69917077711 udbg: Deschedule thread[15]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917079165 udbg: 6 woken up on A!
-69917082163 udbg: before signal, cv addr:0xffffefb0
-69917085897 udbg: REmove thread[4][addr:0x010056c8] from cond waitting list!!!!
-69917087391 udbg: UNLOCK AFTERT tg->lock
-69917087884 udbg: thread finished
-69917091027 udbg: Got the exit_tid[6] addr[0x010050f0]
-69917091687 udbg: Thread 6 exit
-69917092589 udbg: exit_thr->join_tid:-2
-69917095393 udbg: In thr_join, now thr[4], join_tid[6]
-69917098469 udbg: Got the target tid[6] addr[0x010050f0]
-69917099877 udbg: Joined thread already exit!! Won't wait anymore 
-69917103338 udbg: cond waiting_list addr [0xffffefc4]
-69917103715 udbg: DEBUG COND!
-69917106572 udbg: Start:tid[4]addr[0x01005260]->
-69917108263 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917109997 udbg: 13 woken up on A!
-69917114011 udbg: REmove thread[14][addr:0x010051d0] from cond waitting list!!!!
-69917115826 udbg: 13 sleeping! on B
-69917118943 udbg: cond waiting_list addr [0x01004ef4]
-69917119320 udbg: DEBUG COND!
-69917122457 udbg: Start:tid[13]addr[0x010051d0]->
-69917124428 udbg: Deschedule thread[13]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917126162 udbg: 14 woken up on B!
-69917126574 udbg: DEBUG COND!
-69917129712 udbg: Start:tid[15]addr[0x01005140]->
-69917131398 udbg: In cond_broadcast: no threads!
-69917132207 udbg: AFter broadcast DEBUG COND!
-69917133252 udbg: 14 sleeping! on A
-69917136345 udbg: cond waiting_list addr [0x01004f74]
-69917136722 udbg: DEBUG COND!
-69917139859 udbg: Start:tid[14]addr[0x01005140]->
-69917141830 udbg: Deschedule thread[14]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917143564 udbg: 15 woken up on A!
-69917146562 udbg: before signal, cv addr:0xffffefb0
-69917150296 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917151775 udbg: UNLOCK AFTERT tg->lock
-69917152268 udbg: thread finished
-69917155736 udbg: Got the exit_tid[15] addr[0x01005600]
-69917156676 udbg: Thread 15 exit
-69917157578 udbg: exit_thr->join_tid:-2
-69917177356 udbg: In thr_join, now thr[4], join_tid[15]
-69917180757 udbg: Got the target tid[15] addr[0x01005600]
-69917182165 udbg: Joined thread already exit!! Won't wait anymore 
-69917185626 udbg: cond waiting_list addr [0xffffefc4]
-69917186003 udbg: DEBUG COND!
-69917188860 udbg: Start:tid[4]addr[0x01005260]->
-69917190551 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917192285 udbg: 12 woken up on A!
-69917196299 udbg: REmove thread[13][addr:0x010051d0] from cond waitting list!!!!
-69917198114 udbg: 12 sleeping! on B
-69917201231 udbg: cond waiting_list addr [0x01004ef4]
-69917201608 udbg: DEBUG COND!
-69917204745 udbg: Start:tid[12]addr[0x010051d0]->
-69917206716 udbg: Deschedule thread[12]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917208450 udbg: 13 woken up on B!
-69917208862 udbg: DEBUG COND!
-69917212000 udbg: Start:tid[14]addr[0x01005140]->
-69917213686 udbg: In cond_broadcast: no threads!
-69917214495 udbg: AFter broadcast DEBUG COND!
-69917215540 udbg: 13 sleeping! on A
-69917218633 udbg: cond waiting_list addr [0x01004f74]
-69917219010 udbg: DEBUG COND!
-69917222147 udbg: Start:tid[13]addr[0x01005140]->
-69917224118 udbg: Deschedule thread[13]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917225852 udbg: 14 woken up on A!
-69917228850 udbg: before signal, cv addr:0xffffefb0
-69917232584 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917234063 udbg: UNLOCK AFTERT tg->lock
-69917234556 udbg: thread finished
-69917238019 udbg: Got the exit_tid[14] addr[0x01005570]
-69917238959 udbg: Thread 14 exit
-69917239861 udbg: exit_thr->join_tid:-2
-69917259645 udbg: In thr_join, now thr[4], join_tid[14]
-69917263041 udbg: Got the target tid[14] addr[0x01005570]
-69917264449 udbg: Joined thread already exit!! Won't wait anymore 
-69917267910 udbg: cond waiting_list addr [0xffffefc4]
-69917268287 udbg: DEBUG COND!
-69917271144 udbg: Start:tid[4]addr[0x01005260]->
-69917272835 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917274569 udbg: 11 woken up on A!
-69917278583 udbg: REmove thread[12][addr:0x010051d0] from cond waitting list!!!!
-69917280398 udbg: 11 sleeping! on B
-69917283515 udbg: cond waiting_list addr [0x01004ef4]
-69917283892 udbg: DEBUG COND!
-69917287029 udbg: Start:tid[11]addr[0x010051d0]->
-69917289000 udbg: Deschedule thread[11]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917290734 udbg: 12 woken up on B!
-69917291146 udbg: DEBUG COND!
-69917294284 udbg: Start:tid[13]addr[0x01005140]->
-69917295970 udbg: In cond_broadcast: no threads!
-69917296779 udbg: AFter broadcast DEBUG COND!
-69917297824 udbg: 12 sleeping! on A
-69917300917 udbg: cond waiting_list addr [0x01004f74]
-69917301294 udbg: DEBUG COND!
-69917304431 udbg: Start:tid[12]addr[0x01005140]->
-69917306402 udbg: Deschedule thread[12]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917308136 udbg: 13 woken up on A!
-69917311134 udbg: before signal, cv addr:0xffffefb0
-69917314868 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917316347 udbg: UNLOCK AFTERT tg->lock
-69917316840 udbg: thread finished
-69917320298 udbg: Got the exit_tid[13] addr[0x010054e0]
-69917321238 udbg: Thread 13 exit
-69917322140 udbg: exit_thr->join_tid:-2
-69917341927 udbg: In thr_join, now thr[4], join_tid[13]
-69917345318 udbg: Got the target tid[13] addr[0x010054e0]
-69917346726 udbg: Joined thread already exit!! Won't wait anymore 
-69917350187 udbg: cond waiting_list addr [0xffffefc4]
-69917350564 udbg: DEBUG COND!
-69917353421 udbg: Start:tid[4]addr[0x01005260]->
-69917355112 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917356846 udbg: 10 woken up on A!
-69917360860 udbg: REmove thread[11][addr:0x010051d0] from cond waitting list!!!!
-69917362675 udbg: 10 sleeping! on B
-69917365792 udbg: cond waiting_list addr [0x01004ef4]
-69917366169 udbg: DEBUG COND!
-69917369306 udbg: Start:tid[10]addr[0x010051d0]->
-69917371277 udbg: Deschedule thread[10]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917373011 udbg: 11 woken up on B!
-69917373423 udbg: DEBUG COND!
-69917376561 udbg: Start:tid[12]addr[0x01005140]->
-69917378247 udbg: In cond_broadcast: no threads!
-69917379056 udbg: AFter broadcast DEBUG COND!
-69917380101 udbg: 11 sleeping! on A
-69917383194 udbg: cond waiting_list addr [0x01004f74]
-69917383571 udbg: DEBUG COND!
-69917386708 udbg: Start:tid[11]addr[0x01005140]->
-69917388679 udbg: Deschedule thread[11]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917390413 udbg: 12 woken up on A!
-69917393411 udbg: before signal, cv addr:0xffffefb0
-69917397145 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917398624 udbg: UNLOCK AFTERT tg->lock
-69917399117 udbg: thread finished
-69917402570 udbg: Got the exit_tid[12] addr[0x01005450]
-69917403510 udbg: Thread 12 exit
-69917404412 udbg: exit_thr->join_tid:-2
-69917424199 udbg: In thr_join, now thr[4], join_tid[12]
-69917427585 udbg: Got the target tid[12] addr[0x01005450]
-69917428993 udbg: Joined thread already exit!! Won't wait anymore 
-69917432454 udbg: cond waiting_list addr [0xffffefc4]
-69917432831 udbg: DEBUG COND!
-69917435688 udbg: Start:tid[4]addr[0x01005260]->
-69917437379 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917438833 udbg: 9 woken up on A!
-69917442847 udbg: REmove thread[10][addr:0x010051d0] from cond waitting list!!!!
-69917444382 udbg: 9 sleeping! on B
-69917447499 udbg: cond waiting_list addr [0x01004ef4]
-69917447876 udbg: DEBUG COND!
-69917450733 udbg: Start:tid[9]addr[0x010051d0]->
-69917452424 udbg: Deschedule thread[9]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917454158 udbg: 10 woken up on B!
-69917454570 udbg: DEBUG COND!
-69917457708 udbg: Start:tid[11]addr[0x01005140]->
-69917459394 udbg: In cond_broadcast: no threads!
-69917460203 udbg: AFter broadcast DEBUG COND!
-69917461248 udbg: 10 sleeping! on A
-69917464341 udbg: cond waiting_list addr [0x01004f74]
-69917464718 udbg: DEBUG COND!
-69917467855 udbg: Start:tid[10]addr[0x01005140]->
-69917469826 udbg: Deschedule thread[10]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917471560 udbg: 11 woken up on A!
-69917474558 udbg: before signal, cv addr:0xffffefb0
-69917478292 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917479771 udbg: UNLOCK AFTERT tg->lock
-69917480264 udbg: thread finished
-69917483712 udbg: Got the exit_tid[11] addr[0x010053c0]
-69917484652 udbg: Thread 11 exit
-69917485554 udbg: exit_thr->join_tid:-2
-69917505341 udbg: In thr_join, now thr[4], join_tid[11]
-69917508722 udbg: Got the target tid[11] addr[0x010053c0]
-69917510130 udbg: Joined thread already exit!! Won't wait anymore 
-69917513591 udbg: cond waiting_list addr [0xffffefc4]
-69917513968 udbg: DEBUG COND!
-69917516825 udbg: Start:tid[4]addr[0x01005260]->
-69917518516 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917519970 udbg: 8 woken up on A!
-69917523704 udbg: REmove thread[9][addr:0x010051d0] from cond waitting list!!!!
-69917525239 udbg: 8 sleeping! on B
-69917528356 udbg: cond waiting_list addr [0x01004ef4]
-69917528733 udbg: DEBUG COND!
-69917531590 udbg: Start:tid[8]addr[0x010051d0]->
-69917533281 udbg: Deschedule thread[8]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917534735 udbg: 9 woken up on B!
-69917535147 udbg: DEBUG COND!
-69917538285 udbg: Start:tid[10]addr[0x01005140]->
-69917539971 udbg: In cond_broadcast: no threads!
-69917540780 udbg: AFter broadcast DEBUG COND!
-69917541545 udbg: 9 sleeping! on A
-69917544638 udbg: cond waiting_list addr [0x01004f74]
-69917545015 udbg: DEBUG COND!
-69917547872 udbg: Start:tid[9]addr[0x01005140]->
-69917549563 udbg: Deschedule thread[9]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917551297 udbg: 10 woken up on A!
-69917554295 udbg: before signal, cv addr:0xffffefb0
-69917558029 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917559508 udbg: UNLOCK AFTERT tg->lock
-69917560001 udbg: thread finished
-69917563444 udbg: Got the exit_tid[10] addr[0x01005330]
-69917564384 udbg: Thread 10 exit
-69917565286 udbg: exit_thr->join_tid:-2
-69917585073 udbg: In thr_join, now thr[4], join_tid[10]
-69917588449 udbg: Got the target tid[10] addr[0x01005330]
-69917589857 udbg: Joined thread already exit!! Won't wait anymore 
-69917593318 udbg: cond waiting_list addr [0xffffefc4]
-69917593695 udbg: DEBUG COND!
-69917596552 udbg: Start:tid[4]addr[0x01005260]->
-69917598243 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917599696 udbg: 7 woken up on A!
-69917603430 udbg: REmove thread[8][addr:0x010051d0] from cond waitting list!!!!
-69917604964 udbg: 7 sleeping! on B
-69917608081 udbg: cond waiting_list addr [0x01004ef4]
-69917608458 udbg: DEBUG COND!
-69917611315 udbg: Start:tid[7]addr[0x010051d0]->
-69917613006 udbg: Deschedule thread[7]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917614459 udbg: 8 woken up on B!
-69917614871 udbg: DEBUG COND!
-69917617729 udbg: Start:tid[9]addr[0x01005140]->
-69917619414 udbg: In cond_broadcast: no threads!
-69917620223 udbg: AFter broadcast DEBUG COND!
-69917620988 udbg: 8 sleeping! on A
-69917624081 udbg: cond waiting_list addr [0x01004f74]
-69917624458 udbg: DEBUG COND!
-69917627315 udbg: Start:tid[8]addr[0x01005140]->
-69917629006 udbg: Deschedule thread[8]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69917630459 udbg: 9 woken up on A!
-69917633457 udbg: before signal, cv addr:0xffffefb0
-69917637191 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69917638669 udbg: UNLOCK AFTERT tg->lock
-69917639162 udbg: thread finished
-69917642320 udbg: Got the exit_tid[9] addr[0x010052a0]
-69917642980 udbg: Thread 9 exit
-69917643882 udbg: exit_thr->join_tid:-2
-69917663388 udbg: In thr_join, now thr[4], join_tid[9]
-69917666479 udbg: Got the target tid[9] addr[0x010052a0]
-69917667887 udbg: Joined thread already exit!! Won't wait anymore 
-69917671356 udbg: cond waiting_list addr [0xffffefc4]
-69917671733 udbg: DEBUG COND!
-69917674590 udbg: Start:tid[4]addr[0x01005260]->
-69917676281 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69926979848 udbg: instigator broadcasting on A
-69926983582 udbg: REmove thread[8][addr:0x01005140] from cond waitting list!!!!
-69926985211 udbg: instigator broadcasting on B
-69926988945 udbg: REmove thread[7][addr:0x010051d0] from cond waitting list!!!!
-69926991152 udbg: 7 woken up on B!
-69926991564 udbg: DEBUG COND!
-69926992459 udbg: In cond_broadcast: no threads!
-69926993268 udbg: AFter broadcast DEBUG COND!
-69926994033 udbg: 7 sleeping! on A
-69926997126 udbg: cond waiting_list addr [0x01004f74]
-69926997503 udbg: DEBUG COND!
-69927000360 udbg: Start:tid[7]addr[0x01005140]->
-69927002051 udbg: Deschedule thread[7]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69927003504 udbg: 8 woken up on A!
-69927006502 udbg: before signal, cv addr:0xffffefb0
-69927010236 udbg: REmove thread[4][addr:0x01005260] from cond waitting list!!!!
-69927011729 udbg: UNLOCK AFTERT tg->lock
-69927012222 udbg: thread finished
-69927015375 udbg: Got the exit_tid[8] addr[0x01005210]
-69927016035 udbg: Thread 8 exit
-69927016937 udbg: exit_thr->join_tid:-2
-69927036443 udbg: In thr_join, now thr[4], join_tid[8]
-69927039529 udbg: Got the target tid[8] addr[0x01005210]
-69927040937 udbg: Joined thread already exit!! Won't wait anymore 
-69927044382 udbg: cond waiting_list addr [0xffffefc4]
-69927044759 udbg: DEBUG COND!
-69927047616 udbg: Start:tid[4]addr[0x010051d0]->
-69927049307 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69936979178 udbg: instigator broadcasting on A
-69936982912 udbg: REmove thread[7][addr:0x01005140] from cond waitting list!!!!
-69936984541 udbg: instigator broadcasting on B
-69936985171 udbg: No blocked threads!
-69936986604 udbg: 7 woken up on A!
-69936989602 udbg: before signal, cv addr:0xffffefb0
-69936993336 udbg: REmove thread[4][addr:0x010051d0] from cond waitting list!!!!
-69936994829 udbg: UNLOCK AFTERT tg->lock
-69936995322 udbg: thread finished
-69936998470 udbg: Got the exit_tid[7] addr[0x01005180]
-69936999130 udbg: Thread 7 exit
-69937000032 udbg: exit_thr->join_tid:-2
-69937019535 udbg: In thr_join, now thr[4], join_tid[7]
-69937022616 udbg: Got the target tid[7] addr[0x01005180]
-69937024024 udbg: Joined thread already exit!! Won't wait anymore 
-69937027787 udbg: REmove thread[5][addr:0x010050b0] from cond waitting list!!!!
-69937030238 udbg: In thr_join, now thr[4], join_tid[5]
-69937033310 udbg: Got the target tid[5] addr[0x01005060]
-69937034747 udbg: Your Joined thread is still running, waiting now!
-69937037823 udbg: cond waiting_list addr [0x01005088]
-69937038200 udbg: DEBUG COND!
-69937041057 udbg: Start:tid[4]addr[0x010050b0]->
-69937042748 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69937043893 udbg: Good Morning!
-69937047032 udbg: Got the exit_tid[5] addr[0x01005060]
-69937047692 udbg: Thread 5 exit
-69937048569 udbg: exit_thr->join_tid:4
-69937049191 udbg: Need singal!!!!!!!!!
-69937052926 udbg: REmove thread[4][addr:0x010050b0] from cond waitting list!!!!
-69937073380 udbg: In thr_join, now thr[4], join_tid[16]
-69937076786 udbg: Got the target tid[16] addr[0x01005678]
-69937078223 udbg: Your Joined thread is still running, waiting now!
-69937081299 udbg: cond waiting_list addr [0x010056a0]
-69937081676 udbg: DEBUG COND!
-69937084533 udbg: Start:tid[4]addr[0x010050b0]->
-69937086224 udbg: Deschedule thread[4]!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-69946978508 udbg: instigator broadcasting on A
-69946979138 udbg: No blocked threads!
-69946979995 udbg: instigator broadcasting on B
-69946980625 udbg: No blocked threads!
-69946984121 udbg: Got the exit_tid[16] addr[0x01005678]
-69946985061 udbg: Thread 16 exit
-69946985938 udbg: exit_thr->join_tid:4
-69946986560 udbg: Need singal!!!!!!!!!
-69946990295 udbg: REmove thread[4][addr:0x010050b0] from cond waitting list!!!!
-69947009736 udbg: Cannot found the target!
-189701428010 kdbg: Loader: Couldn't read elf header: -8, qq
+89296787301 udbg: DEBUG:  thr_create start
+89296811467 udbg: DEBUG:  after thread fork
+89296812516 udbg: In Parent, child tid is 7
+89296815456 udbg:  cur_stack_base_addr is ffff1000
+89296816141 udbg: DEBUG:  thr_create end
+89296816909 udbg: DEBUG:  thr_create start
+89296841189 udbg: DEBUG:  after thread fork
+89296842238 udbg: In Parent, child tid is 8
+89296845178 udbg:  cur_stack_base_addr is fffef000
+89296845863 udbg: DEBUG:  thr_create end
+89296847515 udbg: In thr_join, now thr[5], join_tid[7]
+89296850596 udbg: Got the target tid[7] addr[0x01006128]
+89296852033 udbg: Your Joined thread is still running, waiting now!
+89296853533 udbg:  parent id is 4
+89296854310 udbg: child tid = 6
+89296855176 udbg: Thread count = 3
+
+89296855948 udbg: DEBUG:  thr_create start
+89296880332 udbg: DEBUG:  after thread fork
+89296881381 udbg: In Parent, child tid is 9
+89296884321 udbg:  cur_stack_base_addr is fffed000
+89296885006 udbg: DEBUG:  thr_create end
+89296885774 udbg: DEBUG:  thr_create start
+89296910258 udbg: DEBUG:  after thread fork
+89296911587 udbg: In Parent, child tid is 10
+89296914527 udbg:  cur_stack_base_addr is fffeb000
+89296915212 udbg: DEBUG:  thr_create end
+89296916864 udbg: In thr_join, now thr[6], join_tid[9]
+89296919955 udbg: Got the target tid[9] addr[0x010061f0]
+89296921392 udbg: Your Joined thread is still running, waiting now!
+89296923324 udbg:  parent id is 5
+89296924101 udbg: child tid = 7
+89296924967 udbg: Thread count = 4
+
+89296925739 udbg: DEBUG:  thr_create start
+89296950327 udbg: DEBUG:  after thread fork
+89296951656 udbg: In Parent, child tid is 11
+89296954596 udbg:  cur_stack_base_addr is fffe9000
+89296955281 udbg: DEBUG:  thr_create end
+89296956049 udbg: DEBUG:  thr_create start
+89296980733 udbg: DEBUG:  after thread fork
+89296982062 udbg: In Parent, child tid is 12
+89296985002 udbg:  cur_stack_base_addr is fffe7000
+89296985687 udbg: DEBUG:  thr_create end
+89296987619 udbg: In thr_join, now thr[7], join_tid[11]
+89296991000 udbg: Got the target tid[11] addr[0x010062b8]
+89296992437 udbg: Your Joined thread is still running, waiting now!
+89296993985 udbg:  parent id is 5
+89296994762 udbg: child tid = 8
+89296995628 udbg: Thread count = 5
+
+89296996400 udbg: DEBUG:  thr_create start
+89297021188 udbg: DEBUG:  after thread fork
+89297022517 udbg: In Parent, child tid is 13
+89297025457 udbg:  cur_stack_base_addr is fffe5000
+89297026142 udbg: DEBUG:  thr_create end
+89297026910 udbg: DEBUG:  thr_create start
+89297051794 udbg: DEBUG:  after thread fork
+89297053123 udbg: In Parent, child tid is 14
+89297056063 udbg:  cur_stack_base_addr is fffe3000
+89297056748 udbg: DEBUG:  thr_create end
+89297058680 udbg: In thr_join, now thr[8], join_tid[13]
+89297062071 udbg: Got the target tid[13] addr[0x01006380]
+89297063508 udbg: Your Joined thread is still running, waiting now!
+89297065488 udbg:  parent id is 6
+89297066265 udbg: child tid = 9
+89297067131 udbg: Thread count = 6
+
+89297067903 udbg: DEBUG:  thr_create start
+89297092891 udbg: DEBUG:  after thread fork
+89297094220 udbg: In Parent, child tid is 15
+89297097160 udbg:  cur_stack_base_addr is fffe1000
+89297097845 udbg: DEBUG:  thr_create end
+89297098613 udbg: DEBUG:  thr_create start
+89297123697 udbg: DEBUG:  after thread fork
+89297125026 udbg: In Parent, child tid is 16
+89297127966 udbg:  cur_stack_base_addr is fffdf000
+89297128651 udbg: DEBUG:  thr_create end
+89297130583 udbg: In thr_join, now thr[9], join_tid[15]
+89297133984 udbg: Got the target tid[15] addr[0x01006448]
+89297135421 udbg: Your Joined thread is still running, waiting now!
+89297137017 udbg:  parent id is 6
+89297138074 udbg: child tid = 10
+89297138940 udbg: Thread count = 7
+
+89297139712 udbg: DEBUG:  thr_create start
+89297164900 udbg: DEBUG:  after thread fork
+89297166229 udbg: In Parent, child tid is 17
+89297169169 udbg:  cur_stack_base_addr is fffdd000
+89297169854 udbg: DEBUG:  thr_create end
+89297170622 udbg: DEBUG:  thr_create start
+89297195906 udbg: DEBUG:  after thread fork
+89297197235 udbg: In Parent, child tid is 18
+89297200175 udbg:  cur_stack_base_addr is fffdb000
+89297200860 udbg: DEBUG:  thr_create end
+89297203072 udbg: In thr_join, now thr[10], join_tid[17]
+89297206483 udbg: Got the target tid[17] addr[0x01006510]
+89297207920 udbg: Your Joined thread is still running, waiting now!
+89297209948 udbg:  parent id is 7
+89297211005 udbg: child tid = 11
+89297211871 udbg: Thread count = 8
+
+89297213241 udbg: Thread count = 8
+
+89297227629 udbg:  parent id is 7
+89297228686 udbg: child tid = 12
+89297229552 udbg: Thread count = 9
+
+89297230922 udbg: Thread count = 9
+
+89297231585 udbg: thread finished
+89297235038 udbg: Got the exit_tid[12] addr[0x01006308]
+89297235978 udbg: Thread 12 exit
+89297236880 udbg: exit_thr->join_tid:-2
+89297238869 udbg:  parent id is 8
+89297239926 udbg: child tid = 13
+89297241072 udbg: Thread count = 10
+
+89297242722 udbg: Thread count = 10
+
+89297244005 udbg:  parent id is 8
+89297245062 udbg: child tid = 14
+89297246208 udbg: Thread count = 11
+
+89297247858 udbg: Thread count = 11
+
+89297249553 udbg:  parent id is 9
+89297250610 udbg: child tid = 15
+89297251756 udbg: Thread count = 12
+
+89297253406 udbg: Thread count = 12
+
+89297254714 udbg:  parent id is 9
+89297255771 udbg: child tid = 16
+89297256917 udbg: Thread count = 13
+
+89297258567 udbg: Thread count = 13
+
+89297260564 udbg:  parent id is 10
+89297261621 udbg: child tid = 17
+89297262767 udbg: Thread count = 14
+
+89297264417 udbg: Thread count = 14
+
+89297266023 udbg:  parent id is 10
+89297267080 udbg: child tid = 18
+89297268226 udbg: Thread count = 15
+
+89297269876 udbg: Thread count = 15
+
+89297270539 udbg: thread finished
+89297274022 udbg: Got the exit_tid[18] addr[0x01006560]
+89297274962 udbg: Thread 18 exit
+89297275864 udbg: exit_thr->join_tid:-2
+89297681587 udbg: thread finished
+89297685050 udbg: Got the exit_tid[14] addr[0x010063d0]
+89297685990 udbg: Thread 14 exit
+89297686892 udbg: exit_thr->join_tid:-2
+89299681538 udbg: thread finished
+89299685011 udbg: Got the exit_tid[16] addr[0x01006498]
+89299685951 udbg: Thread 16 exit
+89299686853 udbg: exit_thr->join_tid:-2
+89299704902 udbg: thread finished
+89299708350 udbg: Got the exit_tid[11] addr[0x010062b8]
+89299709290 udbg: Thread 11 exit
+89299710167 udbg: exit_thr->join_tid:7
+89299710789 udbg: Need singal!!!!!!!!!
+89299731307 udbg: In thr_join, now thr[7], join_tid[12]
+89299734693 udbg: Got the target tid[12] addr[0x01006308]
+89299736101 udbg: Joined thread already exit!! Won't wait anymore 
+89299736889 udbg: DEBUG:  thr_create start
+89299762273 udbg: DEBUG:  after thread fork
+89299763602 udbg: In Parent, child tid is 19
+89299766542 udbg:  cur_stack_base_addr is fffd9000
+89299767227 udbg: DEBUG:  thr_create end
+89299767995 udbg: DEBUG:  thr_create start
+89299793495 udbg: DEBUG:  after thread fork
+89299794824 udbg: In Parent, child tid is 20
+89299797764 udbg:  cur_stack_base_addr is fffd7000
+89299798449 udbg: DEBUG:  thr_create end
+89299800381 udbg: In thr_join, now thr[7], join_tid[19]
+89299803802 udbg: Got the target tid[19] addr[0x010065d8]
+89299805239 udbg: Your Joined thread is still running, waiting now!
+89299806779 udbg:  parent id is 7
+89299807836 udbg: child tid = 19
+89299808982 udbg: Thread count = 16
+
+89299810632 udbg: Thread count = 16
+
+89299811933 udbg:  parent id is 7
+89299812990 udbg: child tid = 20
+89299814136 udbg: Thread count = 17
+
+89299815786 udbg: Thread count = 17
+
+89301681488 udbg: thread finished
+89301684981 udbg: Got the exit_tid[20] addr[0x01006628]
+89301685921 udbg: Thread 20 exit
+89301686823 udbg: exit_thr->join_tid:-2
+89301704867 udbg: thread finished
+89301708345 udbg: Got the exit_tid[17] addr[0x01006510]
+89301709285 udbg: Thread 17 exit
+89301710442 udbg: exit_thr->join_tid:10
+89301711064 udbg: Need singal!!!!!!!!!
+89301731843 udbg: In thr_join, now thr[10], join_tid[18]
+89301735259 udbg: Got the target tid[18] addr[0x01006560]
+89301736667 udbg: Joined thread already exit!! Won't wait anymore 
+89301737455 udbg: DEBUG:  thr_create start
+89301763051 udbg: DEBUG:  after thread fork
+89301764380 udbg: In Parent, child tid is 21
+89301767320 udbg:  cur_stack_base_addr is fffd5000
+89301768005 udbg: DEBUG:  thr_create end
+89301768773 udbg: DEBUG:  thr_create start
+89301794465 udbg: DEBUG:  after thread fork
+89301795794 udbg: In Parent, child tid is 22
+89301798734 udbg:  cur_stack_base_addr is fffd3000
+89301799419 udbg: DEBUG:  thr_create end
+89301801631 udbg: In thr_join, now thr[10], join_tid[21]
+89301805062 udbg: Got the target tid[21] addr[0x01006678]
+89301806499 udbg: Your Joined thread is still running, waiting now!
+89301807900 udbg: thread finished
+89301811368 udbg: Got the exit_tid[15] addr[0x01006448]
+89301812308 udbg: Thread 15 exit
+89301813185 udbg: exit_thr->join_tid:9
+89301813807 udbg: Need singal!!!!!!!!!
+89301834315 udbg: In thr_join, now thr[9], join_tid[16]
+89301837721 udbg: Got the target tid[16] addr[0x01006498]
+89301839129 udbg: Joined thread already exit!! Won't wait anymore 
+89301839917 udbg: DEBUG:  thr_create start
+89301865709 udbg: DEBUG:  after thread fork
+89301867038 udbg: In Parent, child tid is 23
+89301869978 udbg:  cur_stack_base_addr is fffd1000
+89301870663 udbg: DEBUG:  thr_create end
+89301871431 udbg: DEBUG:  thr_create start
+89301897319 udbg: DEBUG:  after thread fork
+89301898648 udbg: In Parent, child tid is 24
+89301901588 udbg:  cur_stack_base_addr is fffcf000
+89301902273 udbg: DEBUG:  thr_create end
+89301904205 udbg: In thr_join, now thr[9], join_tid[23]
+89301907646 udbg: Got the target tid[23] addr[0x01006718]
+89301909083 udbg: Your Joined thread is still running, waiting now!
+89301910951 udbg:  parent id is 10
+89301912008 udbg: child tid = 21
+89301913154 udbg: Thread count = 18
+
+89301914804 udbg: Thread count = 18
+
+89301915467 udbg: thread finished
+89301918965 udbg: Got the exit_tid[21] addr[0x01006678]
+89301919905 udbg: Thread 21 exit
+89301921062 udbg: exit_thr->join_tid:10
+89301921684 udbg: Need singal!!!!!!!!!
+89301923494 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89301925216 udbg:  parent id is 10
+89301926273 udbg: child tid = 22
+89301927419 udbg: Thread count = 19
+
+89301929069 udbg: Thread count = 19
+
+89301930361 udbg:  parent id is 9
+89301931418 udbg: child tid = 23
+89301932564 udbg: Thread count = 20
+
+89301934214 udbg: Thread count = 20
+
+89301934877 udbg: thread finished
+89301938385 udbg: Got the exit_tid[23] addr[0x01006718]
+89301939325 udbg: Thread 23 exit
+89301940202 udbg: exit_thr->join_tid:9
+89301940824 udbg: Need singal!!!!!!!!!
+89301942634 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89301944076 udbg:  parent id is 9
+89301945133 udbg: child tid = 24
+89301946279 udbg: Thread count = 21
+
+89301947929 udbg: Thread count = 21
+
+89301950287 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89301953076 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89301974826 udbg: In thr_join, now thr[10], join_tid[22]
+89301978262 udbg: Got the target tid[22] addr[0x010066c8]
+89301979699 udbg: Your Joined thread is still running, waiting now!
+89302001040 udbg: In thr_join, now thr[9], join_tid[24]
+89302004486 udbg: Got the target tid[24] addr[0x01006768]
+89302005923 udbg: Your Joined thread is still running, waiting now!
+89303681185 udbg: thread finished
+89303684643 udbg: Got the exit_tid[13] addr[0x01006380]
+89303685583 udbg: Thread 13 exit
+89303686460 udbg: exit_thr->join_tid:8
+89303687082 udbg: Need singal!!!!!!!!!
+89303707586 udbg: In thr_join, now thr[8], join_tid[14]
+89303710982 udbg: Got the target tid[14] addr[0x010063d0]
+89303712390 udbg: Joined thread already exit!! Won't wait anymore 
+89303713178 udbg: DEBUG:  thr_create start
+89303739156 udbg: DEBUG:  after thread fork
+89303740485 udbg: In Parent, child tid is 25
+89303743425 udbg:  cur_stack_base_addr is fffcd000
+89303744110 udbg: DEBUG:  thr_create end
+89303744878 udbg: DEBUG:  thr_create start
+89303770960 udbg: DEBUG:  after thread fork
+89303772289 udbg: In Parent, child tid is 26
+89303775229 udbg:  cur_stack_base_addr is fffcb000
+89303775914 udbg: DEBUG:  thr_create end
+89303777846 udbg: In thr_join, now thr[8], join_tid[25]
+89303781297 udbg: Got the target tid[25] addr[0x010067b8]
+89303782734 udbg: Your Joined thread is still running, waiting now!
+89303784298 udbg:  parent id is 8
+89303785355 udbg: child tid = 25
+89303786501 udbg: Thread count = 22
+
+89303788151 udbg: Thread count = 22
+
+89303788814 udbg: thread finished
+89303792332 udbg: Got the exit_tid[25] addr[0x010067b8]
+89303793272 udbg: Thread 25 exit
+89303794149 udbg: exit_thr->join_tid:8
+89303794771 udbg: Need singal!!!!!!!!!
+89303796581 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89303798021 udbg:  parent id is 8
+89303799078 udbg: child tid = 26
+89303800224 udbg: Thread count = 23
+
+89303801874 udbg: Thread count = 23
+
+89303804225 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89303825690 udbg: In thr_join, now thr[8], join_tid[26]
+89303829146 udbg: Got the target tid[26] addr[0x01006808]
+89303830583 udbg: Your Joined thread is still running, waiting now!
+89305681051 udbg: thread finished
+89305684539 udbg: Got the exit_tid[19] addr[0x010065d8]
+89305685479 udbg: Thread 19 exit
+89305686356 udbg: exit_thr->join_tid:7
+89305686978 udbg: Need singal!!!!!!!!!
+89305707469 udbg: In thr_join, now thr[7], join_tid[20]
+89305710895 udbg: Got the target tid[20] addr[0x01006628]
+89305712303 udbg: Joined thread already exit!! Won't wait anymore 
+89305713091 udbg: DEBUG:  thr_create start
+89305739261 udbg: DEBUG:  after thread fork
+89305740590 udbg: In Parent, child tid is 27
+89305743530 udbg:  cur_stack_base_addr is fffc9000
+89305744215 udbg: DEBUG:  thr_create end
+89305744983 udbg: DEBUG:  thr_create start
+89305771251 udbg: DEBUG:  after thread fork
+89305772580 udbg: In Parent, child tid is 28
+89305775520 udbg:  cur_stack_base_addr is fffc7000
+89305776205 udbg: DEBUG:  thr_create end
+89305778137 udbg: In thr_join, now thr[7], join_tid[27]
+89305781598 udbg: Got the target tid[27] addr[0x01006858]
+89305783035 udbg: Your Joined thread is still running, waiting now!
+89305784575 udbg:  parent id is 7
+89305785632 udbg: child tid = 27
+89305786778 udbg: Thread count = 24
+
+89305788428 udbg: Thread count = 24
+
+89305789091 udbg: thread finished
+89305792619 udbg: Got the exit_tid[27] addr[0x01006858]
+89305793559 udbg: Thread 27 exit
+89305794436 udbg: exit_thr->join_tid:7
+89305795058 udbg: Need singal!!!!!!!!!
+89305796868 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89305798308 udbg:  parent id is 7
+89305799365 udbg: child tid = 28
+89305800511 udbg: Thread count = 25
+
+89305802161 udbg: Thread count = 25
+
+89305802824 udbg: thread finished
+89305806357 udbg: Got the exit_tid[28] addr[0x010068a8]
+89305807297 udbg: Thread 28 exit
+89305808199 udbg: exit_thr->join_tid:-2
+89305827504 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89305848976 udbg: In thr_join, now thr[7], join_tid[28]
+89305852442 udbg: Got the target tid[28] addr[0x010068a8]
+89305853850 udbg: Joined thread already exit!! Won't wait anymore 
+89305855523 udbg: Thread count = 25
+
+89307680917 udbg: thread finished
+89307684430 udbg: Got the exit_tid[24] addr[0x01006768]
+89307685370 udbg: Thread 24 exit
+89307686247 udbg: exit_thr->join_tid:9
+89307686869 udbg: Need singal!!!!!!!!!
+89307706203 udbg: DEBUG:  thr_create start
+89307732573 udbg: DEBUG:  after thread fork
+89307733902 udbg: In Parent, child tid is 29
+89307736842 udbg:  cur_stack_base_addr is fffc5000
+89307737527 udbg: DEBUG:  thr_create end
+89307738295 udbg: DEBUG:  thr_create start
+89307764763 udbg: DEBUG:  after thread fork
+89307766092 udbg: In Parent, child tid is 30
+89307769032 udbg:  cur_stack_base_addr is fffc3000
+89307769717 udbg: DEBUG:  thr_create end
+89307771649 udbg: In thr_join, now thr[9], join_tid[29]
+89307775120 udbg: Got the target tid[29] addr[0x010068f8]
+89307776557 udbg: Your Joined thread is still running, waiting now!
+89307778097 udbg:  parent id is 9
+89307779154 udbg: child tid = 29
+89307780300 udbg: Thread count = 26
+
+89307781950 udbg: Thread count = 26
+
+89307783251 udbg:  parent id is 9
+89307784308 udbg: child tid = 30
+89307785454 udbg: Thread count = 27
+
+89307787104 udbg: Thread count = 27
+
+89309680952 udbg: thread finished
+89309684100 udbg: Got the exit_tid[7] addr[0x01006128]
+89309684760 udbg: Thread 7 exit
+89309685637 udbg: exit_thr->join_tid:5
+89309686259 udbg: Need singal!!!!!!!!!
+89309706493 udbg: In thr_join, now thr[5], join_tid[8]
+89309709579 udbg: Got the target tid[8] addr[0x01006178]
+89309711016 udbg: Your Joined thread is still running, waiting now!
+89309712297 udbg: thread finished
+89309715820 udbg: Got the exit_tid[26] addr[0x01006808]
+89309716760 udbg: Thread 26 exit
+89309717637 udbg: exit_thr->join_tid:8
+89309718259 udbg: Need singal!!!!!!!!!
+89309737586 udbg: DEBUG:  thr_create start
+89309764168 udbg: DEBUG:  after thread fork
+89309765497 udbg: In Parent, child tid is 31
+89309768437 udbg:  cur_stack_base_addr is fffc1000
+89309769122 udbg: DEBUG:  thr_create end
+89309769890 udbg: DEBUG:  thr_create start
+89309796572 udbg: DEBUG:  after thread fork
+89309797901 udbg: In Parent, child tid is 32
+89309800841 udbg:  cur_stack_base_addr is fffbf000
+89309801526 udbg: DEBUG:  thr_create end
+89309803458 udbg: In thr_join, now thr[8], join_tid[31]
+89309806939 udbg: Got the target tid[31] addr[0x01006998]
+89309808376 udbg: Your Joined thread is still running, waiting now!
+89309809729 udbg: thread finished
+89309813232 udbg: Got the exit_tid[22] addr[0x010066c8]
+89309814172 udbg: Thread 22 exit
+89309815329 udbg: exit_thr->join_tid:10
+89309815951 udbg: Need singal!!!!!!!!!
+89309835290 udbg: DEBUG:  thr_create start
+89309862064 udbg: DEBUG:  after thread fork
+89309863393 udbg: In Parent, child tid is 33
+89309866333 udbg:  cur_stack_base_addr is fffbd000
+89309867018 udbg: DEBUG:  thr_create end
+89309867786 udbg: DEBUG:  thr_create start
+89309894660 udbg: DEBUG:  after thread fork
+89309895989 udbg: In Parent, child tid is 34
+89309898929 udbg:  cur_stack_base_addr is fffbb000
+89309899614 udbg: DEBUG:  thr_create end
+89309901826 udbg: In thr_join, now thr[10], join_tid[33]
+89309905317 udbg: Got the target tid[33] addr[0x01006a38]
+89309906754 udbg: Your Joined thread is still running, waiting now!
+89309908750 udbg:  parent id is 8
+89309909807 udbg: child tid = 31
+89309910953 udbg: Thread count = 28
+
+89309912603 udbg: Thread count = 28
+
+89309913266 udbg: thread finished
+89309916814 udbg: Got the exit_tid[31] addr[0x01006998]
+89309917754 udbg: Thread 31 exit
+89309918631 udbg: exit_thr->join_tid:8
+89309919253 udbg: Need singal!!!!!!!!!
+89309921063 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89309922505 udbg:  parent id is 8
+89309923562 udbg: child tid = 32
+89309924708 udbg: Thread count = 29
+
+89309926358 udbg: Thread count = 29
+
+89309927930 udbg:  parent id is 10
+89309928987 udbg: child tid = 33
+89309930133 udbg: Thread count = 30
+
+89309931783 udbg: Thread count = 30
+
+89309933364 udbg:  parent id is 10
+89309934421 udbg: child tid = 34
+89309935567 udbg: Thread count = 31
+
+89309937217 udbg: Thread count = 31
+
+89309939992 udbg: ALREADY RUNNING!!!!!!!!!!!!!!!!!!!!!!!!!
+89309961463 udbg: In thr_join, now thr[8], join_tid[32]
+89309964949 udbg: Got the target tid[32] addr[0x010069e8]
+89309966386 udbg: Your Joined thread is still running, waiting now!
+89311680649 udbg: thread finished
+89311684187 udbg: Got the exit_tid[29] addr[0x010068f8]
+89311685127 udbg: Thread 29 exit
+89311686004 udbg: exit_thr->join_tid:9
+89311686626 udbg: Need singal!!!!!!!!!
+89311707126 udbg: In thr_join, now thr[9], join_tid[30]
+89311710602 udbg: Got the target tid[30] addr[0x01006948]
+89311712039 udbg: Your Joined thread is still running, waiting now!
+89313680684 udbg: thread finished
+89313684247 udbg: Got the exit_tid[34] addr[0x01006a88]
+89313685187 udbg: Thread 34 exit
+89313686089 udbg: exit_thr->join_tid:-2
+89313704139 udbg: thread finished
+89313707692 udbg: Got the exit_tid[32] addr[0x010069e8]
+89313708632 udbg: Thread 32 exit
+89313709509 udbg: exit_thr->join_tid:8
+89313710131 udbg: Need singal!!!!!!!!!
+89313730370 udbg: Thread count = 31
+
+89313731033 udbg: thread finished
+89313734186 udbg: Got the exit_tid[8] addr[0x01006178]
+89313734846 udbg: Thread 8 exit
+89313735723 udbg: exit_thr->join_tid:5
+89313736345 udbg: Need singal!!!!!!!!!
+89313755699 udbg: DEBUG:  thr_create start
+89313782667 udbg: DEBUG:  after thread fork
+89313783996 udbg: In Parent, child tid is 35
+89313786936 udbg:  cur_stack_base_addr is fffb9000
+89313787621 udbg: DEBUG:  thr_create end
+89313788389 udbg: DEBUG:  thr_create start
+89313815459 udbg: DEBUG:  after thread fork
+89313816788 udbg: In Parent, child tid is 36
+89313819728 udbg:  cur_stack_base_addr is fffb7000
+89313820413 udbg: DEBUG:  thr_create end
+89313822345 udbg: In thr_join, now thr[5], join_tid[35]
+89313825846 udbg: Got the target tid[35] addr[0x01006ad8]
+89313827283 udbg: Your Joined thread is still running, waiting now!
+89313828564 udbg: thread finished
+89313832107 udbg: Got the exit_tid[30] addr[0x01006948]
+89313833047 udbg: Thread 30 exit
+89313833924 udbg: exit_thr->join_tid:9
+89313834546 udbg: Need singal!!!!!!!!!
+89313854770 udbg: Thread count = 31
+
+89313855433 udbg: thread finished
+89313858591 udbg: Got the exit_tid[9] addr[0x010061f0]
+89313859251 udbg: Thread 9 exit
+89313860128 udbg: exit_thr->join_tid:6
+89313860750 udbg: Need singal!!!!!!!!!
+89313881255 udbg: In thr_join, now thr[6], join_tid[10]
+89313884631 udbg: Got the target tid[10] addr[0x01006240]
+89313886068 udbg: Your Joined thread is still running, waiting now!
+89313887584 udbg:  parent id is 5
+89313888641 udbg: child tid = 35
+89313889787 udbg: Thread count = 32
+
+89313890559 udbg: DEBUG:  thr_create start
+89313917722 udbg: DEBUG:  after thread fork
+89313919051 udbg: In Parent, child tid is 37
+89313921991 udbg:  cur_stack_base_addr is fffb5000
+89313922676 udbg: DEBUG:  thr_create end
+89313923444 udbg: DEBUG:  thr_create start
+89313950700 udbg: DEBUG:  after thread fork
+89313952029 udbg: In Parent, child tid is 38
+89313954969 udbg:  cur_stack_base_addr is fffb3000
+89313955654 udbg: DEBUG:  thr_create end
+89313957866 udbg: In thr_join, now thr[35], join_tid[37]
+89313961377 udbg: Got the target tid[37] addr[0x01006b78]
+89313962814 udbg: Your Joined thread is still running, waiting now!
+89313964354 udbg:  parent id is 5
+89313965411 udbg: child tid = 36
+89313966557 udbg: Thread count = 33
+
+89313967329 udbg: DEBUG:  thr_create start
+89313994679 udbg: DEBUG:  after thread fork
+89313996008 udbg: In Parent, child tid is 39
+89313998948 udbg:  cur_stack_base_addr is fffb1000
+89313999633 udbg: DEBUG:  thr_create end
+89314000401 udbg: DEBUG:  thr_create start
+89314027851 udbg: DEBUG:  after thread fork
+89314029180 udbg: In Parent, child tid is 40
+89314032120 udbg:  cur_stack_base_addr is fffaf000
+89314032805 udbg: DEBUG:  thr_create end
+89314035017 udbg: In thr_join, now thr[36], join_tid[39]
+89314038538 udbg: Got the target tid[39] addr[0x01006c18]
+89314039975 udbg: Your Joined thread is still running, waiting now!
+89314042635 udbg:  parent id is 35
+89314043692 udbg: child tid = 37
+89314044838 udbg: Thread count = 34
+
+89314046488 udbg: Thread count = 34
+
+89314048051 udbg:  parent id is 35
+89314049108 udbg: child tid = 38
+89314050254 udbg: Thread count = 35
+
+89314051904 udbg: Thread count = 35
+
+89314053884 udbg:  parent id is 36
+89314054941 udbg: child tid = 39
+89314056087 udbg: Thread count = 36
+
+89314057737 udbg: Thread count = 36
+
+89314059304 udbg:  parent id is 36
+89314060361 udbg: child tid = 40
+89314061507 udbg: Thread count = 37
+
+89314063157 udbg: Thread count = 37
+
+89315680381 udbg: thread finished
+89315683969 udbg: Got the exit_tid[39] addr[0x01006c18]
+89315684909 udbg: Thread 39 exit
+89315686066 udbg: exit_thr->join_tid:36
+89315686688 udbg: Need singal!!!!!!!!!
+89315707465 udbg: In thr_join, now thr[36], join_tid[40]
+89315710991 udbg: Got the target tid[40] addr[0x01006c68]
+89315712428 udbg: Your Joined thread is still running, waiting now!
+89317680332 udbg: thread finished
+89317683910 udbg: Got the exit_tid[37] addr[0x01006b78]
+89317684850 udbg: Thread 37 exit
+89317686007 udbg: exit_thr->join_tid:35
+89317686629 udbg: Need singal!!!!!!!!!
+89317707414 udbg: In thr_join, now thr[35], join_tid[38]
+89317710930 udbg: Got the target tid[38] addr[0x01006bc8]
+89317712367 udbg: Your Joined thread is still running, waiting now!

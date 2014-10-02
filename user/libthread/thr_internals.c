@@ -24,7 +24,7 @@ pcb_t* construct_pcb()
 
 tcb_t* construct_tcb()
 { 
-   tcb_t *new_thr = (tcb_t *) malloc( sizeof (tcb_t));
+   tcb_t *new_thr = (tcb_t *) malloc(sizeof(tcb_t));
    new_thr->state = BLOCKED;
    new_thr->join_tid = DEFAULT_JOIN_TID;
    Q_INIT_ELEM(new_thr, tcb_link);
@@ -32,26 +32,8 @@ tcb_t* construct_tcb()
    new_thr->exit_status = NULL;
    new_thr->stack_start_addr = cur_stack_base_addr;
 
-   
-   //new_thr->list = (list_head*) malloc (sizeof ( list_head));
-   //INIT(new_thr->list);
-   
    return new_thr;
 }
-
-// int get_tid(tcb_t *thr)
-// {
-//    lprintf( "DEBUG: get_tid start");
-//    return 1;
-//    lprintf( "DEBUG: get_tid end");
-// }
-
-// int isStackSpaceAvailable()
-// {
-//    lprintf( "DEBUG: sStackSpaceAvailable start");
-//    return 1;
-//    lprintf( "DEBUG: sStackSpaceAvailable end");
-// }
 
 
 

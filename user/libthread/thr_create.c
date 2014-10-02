@@ -179,10 +179,11 @@ void thr_exit( void *status )
         exit_thr = Q_GET_NEXT(exit_thr, tcb_link);
     }
 
-    /* If we cannot find that tid */
+    /* If we cannot find that tid, the fucking process called 
+     * thr_exit */
     if(exit_thr == NULL){
         lprintf("Cannot found the target!");
-        return;
+        vanish();
     }
     lprintf("Thread %d exit", tid);
     mutex_lock(&exit_thr->join_exit_mtx);

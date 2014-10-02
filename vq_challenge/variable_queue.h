@@ -66,11 +66,11 @@
  *
  *  @param Q_HEAD Pointer to queue head to initialize
  **/
-#define Q_INIT_HEAD(Q_HEAD)                             \
+#define Q_INIT_HEAD(Q_HEAD)                         \
+	(Q_HEAD)->size = 0;                             \
 	(Q_HEAD)->head = NULL;                          \
-	(Q_HEAD)->tail = NULL;                          \
-	(Q_HEAD)->size = 0;                             
-
+	(Q_HEAD)->tail = NULL;
+	
 /** @def Q_INIT_ELEM(Q_ELEM, LINK_NAME)
  *
  *  @brief Initializes the link named LINK_NAME in an instance of the
@@ -81,9 +81,9 @@
  *  @param Q_ELEM Pointer to the structure instance containing the link
  *  @param LINK_NAME The name of the link to initialize
  **/
-#define Q_INIT_ELEM(Q_ELEM, LINK_NAME)                  \
-	(Q_ELEM)->LINK_NAME.next = NULL;                \
-	(Q_ELEM)->LINK_NAME.prev = NULL;                
+#define Q_INIT_ELEM(Q_ELEM, LINK_NAME)              \
+	(Q_ELEM)->LINK_NAME.prev = NULL;                \
+	(Q_ELEM)->LINK_NAME.next = NULL;                
 
 /** @def Q_INSERT_FRONT(Q_HEAD, Q_ELEM, LINK_NAME)
  *
@@ -101,18 +101,18 @@
  *  @return Void (you may change this if your implementation calls for a
  *                return value)
  **/
-#define Q_INSERT_FRONT(Q_HEAD, Q_ELEM, LINK_NAME)           \
+#define Q_INSERT_FRONT(Q_HEAD, Q_ELEM, LINK_NAME)       \
 	if ((Q_HEAD)->size == 0) {                          \
 		(Q_HEAD)->head = (Q_ELEM);                      \
 		(Q_HEAD)->tail = (Q_ELEM);                      \
-		(Q_ELEM)->LINK_NAME.next = NULL;                \
 		(Q_ELEM)->LINK_NAME.prev = NULL;                \
+		(Q_ELEM)->LINK_NAME.next = NULL;                \
 	} else {                                            \
 		(Q_HEAD)->head->LINK_NAME.prev = (Q_ELEM);      \
 		(Q_ELEM)->LINK_NAME.next = (Q_HEAD)->head;      \
 		(Q_ELEM)->LINK_NAME.prev = NULL;                \
 		(Q_HEAD)->head = (Q_ELEM);                      \
-		assert((Q_ELEM)->LINK_NAME.next != NULL);\
+		assert((Q_ELEM)->LINK_NAME.next != NULL);       \
 	}                                                   \
 	(Q_HEAD)->size++;
 
@@ -139,10 +139,10 @@
 		(Q_ELEM)->LINK_NAME.prev = NULL;                \
 	} else {                                            \
 		(Q_HEAD)->tail->LINK_NAME.next = (Q_ELEM);      \
-		(Q_ELEM)->LINK_NAME.prev = (Q_HEAD)->tail;      \
 		(Q_ELEM)->LINK_NAME.next = NULL;                \
+		(Q_ELEM)->LINK_NAME.prev = (Q_HEAD)->tail;      \
 		(Q_HEAD)->tail = (Q_ELEM);                      \
-		assert((Q_ELEM)->LINK_NAME.prev != NULL);\
+		assert((Q_ELEM)->LINK_NAME.prev != NULL);       \
 	}                                                   \
 	(Q_HEAD)->size++; 
 
@@ -227,7 +227,7 @@
 		(Q_TOINSERT)->LINK_NAME.next = (Q_INQ)->LINK_NAME.next; \
 		(Q_INQ)->LINK_NAME.next->LINK_NAME.prev = (Q_TOINSERT); \
 		(Q_INQ)->LINK_NAME.next = (Q_TOINSERT);                 \
-		assert((Q_TOINSERT)->LINK_NAME.prev != NULL);\
+		assert((Q_TOINSERT)->LINK_NAME.prev != NULL);           \
 		(Q_HEAD)->size++;                                       \
 	}                                                           \
 	} else {                                                        \
@@ -256,7 +256,7 @@
 	} else {                                                    \
 		(Q_TOINSERT)->LINK_NAME.prev = (Q_INQ)->LINK_NAME.prev; \
 		(Q_TOINSERT)->LINK_NAME.next = (Q_INQ);                 \
-		(Q_INQ)->LINK_NAME.prev->LINK_NAME.next = (Q_TOINSERT);\
+		(Q_INQ)->LINK_NAME.prev->LINK_NAME.next = (Q_TOINSERT); \
 		(Q_INQ)->LINK_NAME.prev = (Q_TOINSERT);                 \
 		assert((Q_TOINSERT)->LINK_NAME.next != NULL);           \
 		(Q_HEAD)->size++;                                       \
@@ -287,31 +287,33 @@
 #define Q_REMOVE(Q_HEAD,Q_ELEM,LINK_NAME)                               \
 	if ((Q_HEAD)->size > 0) {                                       \
 	 	if ((Q_HEAD)->size == 1) {                                  \
+	        (Q_HEAD)->size = 0;                                     \
 	        (Q_HEAD)->head = NULL;                                  \
 	        (Q_HEAD)->tail = NULL;                                  \
-	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
 	        (Q_ELEM)->LINK_NAME.prev = NULL;                        \
-	        (Q_HEAD)->size = 0;                                     \
-	    } else if ((Q_HEAD)->head == (Q_ELEM)) {                    \
-	        (Q_HEAD)->head = (Q_HEAD)->head->LINK_NAME.next;        \
-	        (Q_HEAD)->head->LINK_NAME.prev = NULL;                  \
 	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
-	        (Q_ELEM)->LINK_NAME.prev = NULL;                        \
-	        (Q_HEAD)->size--;                                       \
 	    } else if ((Q_HEAD)->tail == (Q_ELEM)) {                    \
+	        (Q_HEAD)->size--;                                       \
 	        (Q_HEAD)->tail = (Q_HEAD)->tail->LINK_NAME.prev;        \
 	        (Q_HEAD)->tail->LINK_NAME.next = NULL;                  \
-	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
 	        (Q_ELEM)->LINK_NAME.prev = NULL;                        \
+	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
+	    } 														    \
+	    else if ((Q_HEAD)->head == (Q_ELEM)) {                      \
 	        (Q_HEAD)->size--;                                       \
-	    } else {                                                    \
+	        (Q_HEAD)->head = (Q_HEAD)->head->LINK_NAME.next;        \
+	        (Q_HEAD)->head->LINK_NAME.prev = NULL;                  \
+	        (Q_ELEM)->LINK_NAME.prev = NULL;                        \
+	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
+	    }  													   		\
+	    else {                                                      \
+	        (Q_HEAD)->size--;                                       \
 	        (Q_ELEM)->LINK_NAME.prev->LINK_NAME.next =              \
 	                (Q_ELEM)->LINK_NAME.next;                       \
 	        (Q_ELEM)->LINK_NAME.next->LINK_NAME.prev =              \
 	                (Q_ELEM)->LINK_NAME.prev;                       \
-	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
 	        (Q_ELEM)->LINK_NAME.prev = NULL;                        \
-	        (Q_HEAD)->size--;                                       \
+	        (Q_ELEM)->LINK_NAME.next = NULL;                        \
 	    }                                                           \
 	}
 

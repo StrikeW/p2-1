@@ -78,13 +78,13 @@ void sem_wait( sem_t *sem ){
 
 	mutex_lock(&sem->sem_mutex);
 
-	sem->count--;
-	if(sem->count < 0){
-		lprintf("sem->count < 0 !");
+	while(sem->count <= 0){
+
 		cond_wait(&sem->sem_cond, &sem->sem_mutex);
 	}
 
-	mutex_unlock(&sem->sem_mutex);
+	sem->count--;
+ 	mutex_unlock(&sem->sem_mutex);
 
 	return;
 }
