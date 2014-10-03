@@ -49,8 +49,6 @@ int thr_create( void *(*func)(void *), void *args )
 
     /* Update the tcb with the parent tid*/
     curr_tcb->parentid = gettid();
-    mutex_init(&curr_tcb->join_exit_mtx);
-    cond_init(&curr_tcb->join_cond);
     int tid = thread_fork(cur_stack_base_addr, func, args, curr_tcb);
     lprintf ("DEBUG:  after thread fork");
     if (tid < 0) {
@@ -58,27 +56,11 @@ int thr_create( void *(*func)(void *), void *args )
     }
     curr_tcb->tid = tid;
 
-    /* TODO: move it to thread function  */
+    mutex_init(&curr_tcb->join_exit_mtx);
+    cond_init(&curr_tcb->join_cond);
     
     /* Inserting thread tcb to the thread list */
     Q_INSERT_TAIL(&tcb_list, curr_tcb, tcb_link);
-
-    /* TODO: Remove from DEBUG_LIST  */
-#ifdef DEBUG_LIST
-    tcb_t *tmp_tcb = NULL;
-    tmp_tcb = Q_GET_FRONT(&tcb_list);
-    while(tmp_tcb){
-        if(tmp_tcb == Q_GET_FRONT(&tcb_list)){
-            lprintf("Start:tid[%d]addr[%p]->", tmp_tcb->tid, tmp_tcb);
-        }
-        else{
-            lprintf("->tid[%d]addr[%p]", tmp_tcb->tid, tmp_tcb);
-        }
-        tmp_tcb = Q_GET_NEXT(tmp_tcb, tcb_link);
-    }
-
-#endif
-
     curr_tcb->state = RUNNABLE;
     lprintf ("In Parent, child tid is %d", tid);
     //insert_rear(head_thr_list, curr_tcb->list);	
@@ -112,8 +94,6 @@ void fork_child_handler(void *(*func) (void *), void *arg, tcb_t *curr_tcb)
     curr_tcb->tid = gettid();
     lprintf ("child tid = %d", curr_tcb->tid);
    
-    //mutex_init(&curr_tcb->join_exit_mtx);
-    //cond_init(&curr_tcb->join_cond);
     while(curr_tcb->state == BLOCKED){
         lprintf("Suspend child until parent make it RUNNABLE!!!");
         yield(-1);

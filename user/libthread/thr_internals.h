@@ -16,7 +16,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <simics.h>
-//#include <thr_macros.h>
+#include <thr_macros.h>
 #include <syscall.h>
 #include <_list.h>
 #include <stdlib.h>
@@ -96,7 +96,7 @@ typedef enum
 #define GET_STACK_CURR_BASE(addr) (cur_stack_base_addr)
 
 #define MULTI_THREADING_ENABLE()  ( multi_threading = 1 )  
-#define MULTI_THREADING_DISABLE()  ( multi_threading = 0 ;)  
+#define MULTI_THREADING_DISABLE()  ( multi_threading = 0 )  
 #define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1)
 
 void set_cur_stack_base_addr( void *stack_low);

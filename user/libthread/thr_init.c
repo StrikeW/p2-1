@@ -40,7 +40,8 @@ int thr_init( unsigned int size )
     curr_tcb->tid = gettid();
 
     Q_INIT_HEAD(&tcb_list);
-
+    
+    Q_INSERT_TAIL(&tcb_list, curr_tcb, tcb_link);
     MULTI_THREADING_ENABLE();
     lprintf ("DEBUG:  thr_init end");
     mutex_init(&thread_list);

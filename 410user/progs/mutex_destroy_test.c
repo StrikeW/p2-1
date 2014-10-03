@@ -47,5 +47,6 @@ int main(int argc, char *argv[])
 	mutex_destroy(&mutex);
 
 	REPORT_END_FAIL;
+	lprintf ("END END END");
 	return 1;
 }
