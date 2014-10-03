@@ -38,7 +38,19 @@ int thr_create( void *(*func)(void *), void *args )
     /* lock global mutex */
     mutex_lock(&thread_list);
     lprintf (" starting cur_stack_base_addr = %x",(int)cur_stack_base_addr);
-    if (new_pages((void*)cur_stack_base_addr - thread_stack_size, thread_stack_size) < 0)
+    uintptr_t addr;
+    int free_stack_addr_found = 0;
+
+    if (header.size == 0) {
+       addr = cur_stack_base_addr;
+    }
+    else
+    {
+      addr  = ret_free_stack_addr();
+      free_stack_addr_found = 1;
+    }
+   
+    if (new_pages((void*)addr - thread_stack_size, thread_stack_size) < 0)
     {
         lprintf("PAGE ALLOCATION FAILED");
         return -1;
@@ -49,6 +61,7 @@ int thr_create( void *(*func)(void *), void *args )
 
     /* Update the tcb with the parent tid*/
     curr_tcb->parentid = gettid();
+    curr_tcb->stack_start_addr = addr;
     int tid = thread_fork(cur_stack_base_addr, func, args, curr_tcb);
     lprintf ("DEBUG:  after thread fork");
     if (tid < 0) {
@@ -66,7 +79,9 @@ int thr_create( void *(*func)(void *), void *args )
     //insert_rear(head_thr_list, curr_tcb->list);	
     
     /* Update the stack top */
+    if ( !free_stack_addr_found) {
     cur_stack_base_addr = cur_stack_base_addr - thread_stack_size;
+    }
     lprintf (" cur_stack_base_addr is %x", (int) cur_stack_base_addr);
     /* unlock global mutex */
     mutex_unlock(&thread_list);
@@ -206,7 +221,6 @@ int thr_join( int tid, void **statusp ){
 void thr_exit( void *status )
 {
     int tid = gettid();
-
     tcb_t *exit_thr = NULL;
     
     /* Search for the target thread */
@@ -239,7 +253,9 @@ void thr_exit( void *status )
         lprintf("Need singal!!!!!!!!!");
         cond_signal(&exit_thr->join_cond);
     }
-
+    remove_pages((void*)exit_thr->stack_start_addr);
+    store_free_stack_addr(exit_thr->stack_start_addr);
+    free (exit_thr);
     mutex_unlock(&exit_thr->join_exit_mtx);
 
     vanish();

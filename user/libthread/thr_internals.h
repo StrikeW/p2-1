@@ -34,8 +34,6 @@ int thread_stack_size;
 int parent;
 
 mutex_t thread_list;
-//list_head *join_queue;
-//list_head *head_thr_list;
 
 /* thread execution states */
 typedef enum
@@ -48,10 +46,26 @@ typedef enum
 } exec_state_t;
 
 
+typedef struct stack_free_list_addr
+{
+    int size;
+    struct free_stack_addr *link;
+} stack_free_list_addr_t;
+
+
+typedef struct free_stack_addr 
+{
+    struct free_stack_addr *next;
+    struct free_stack_addr *prev;
+    uintptr_t free_addr;
+}free_stack_addr_t;
+
+stack_free_list_addr_t header;
+
+
 /* thread data structure */
 typedef struct _tcb 
 {
-    //list_head *list;
     int tid;
     int parentid;
     int join_tid;
@@ -102,7 +116,8 @@ typedef enum
 void set_cur_stack_base_addr( void *stack_low);
 
 tcb_t* construct_tcb();
-
+uintptr_t ret_free_stack_addr();
+void store_free_stack_addr(uintptr_t addr);
 int thread_fork(uintptr_t stack_base, void *(*func) (void *), void *arg, tcb_t *curr_tcb);
 
 #endif /* THR_INTERNALS_H */
