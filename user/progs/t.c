@@ -14,9 +14,9 @@ int shared;
 mutex_t *lock;
 void *child(void *param);
 
-#define STACK_SIZE 3072
+#define STACK_SIZE 9072
 
-#define NTHREADS 1 
+#define NTHREADS 4 
 #define SOMETIMES 4
 
 

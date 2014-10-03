@@ -1,3 +1,16 @@
+/** @file cond_type.h
+ *  @brief spin lock datastructure 
+ *         and associated functions
+ *
+ *
+ *  @author  Yuhang Jiang (yuhangj)
+ *  @author  Subramanian Natarajan (snatara1)
+ *
+ *
+ *  @bugs No known bugs
+ *
+ */
+
 #ifndef __SPINLOCK_H__
 #define __SPINLOCK_H__
 

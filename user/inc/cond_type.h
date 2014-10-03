@@ -1,6 +1,17 @@
 /** @file cond_type.h
- *  @brief This file defines the type for condition variables.
+ *  @brief condition variable data
+ *  structure and its associated
+ *  functions. 
+ *
+ *
+ *  @author  Yuhang Jiang (yuhangj)
+ *  @author  Subramanian Natarajan (snatara1)
+ *
+ *
+ *  @bugs No known bugs
+ *
  */
+
 
 #ifndef _COND_TYPE_H
 #define _COND_TYPE_H
@@ -17,9 +28,12 @@
 
 #define DEFAULT_TID -1
 
+
 /* Init the head of the waitting list */
 Q_NEW_HEAD(waiting_list_t, cond);
 
+
+/* cond variable data structure */
 typedef struct cond {
 	Q_NEW_LINK(cond) cond_link;
 	spinlock_t spinlock;
@@ -30,6 +44,8 @@ typedef struct cond {
 	waiting_list_t waiting_list;
 } cond_t;
 
+
+/* cond variable associated functions*/
 int cond_init(cond_t *cond_var);
 void cond_destroy(cond_t *cond_var);
 void cond_wait(cond_t *cv, mutex_t *mp);

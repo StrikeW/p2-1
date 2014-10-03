@@ -1,7 +1,13 @@
-/** @file thr_internals.h
+/** @file  thr_internals.h
+ *  @brief Thread internal data structures
+ *         and internal functions
  *
- *  @brief This file may be used to define things
- *         internal to the thread library.
+ *  @author  Yuhang Jiang (yuhangj)
+ *  @author  Subramanian Natarajan (snatara1)
+ *
+ *
+ *  @bugs
+ *
  */
 
 #ifndef THR_INTERNALS_H
@@ -10,7 +16,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <simics.h>
-#include <thr_macros.h>
+//#include <thr_macros.h>
 #include <syscall.h>
 #include <_list.h>
 #include <stdlib.h>
@@ -18,11 +24,7 @@
 #include "cond_type.h"
 #include "variable_queue.h"
 
-//NEED to remove this, only for debugging
-int main_thread_id;
-///NEED to remove this, only for debugging
-
-
+/* global variables */
 uintptr_t cur_stack_base_addr;
 uintptr_t main_thr_high_addr;
 uintptr_t main_thr_low_addr;
@@ -35,6 +37,7 @@ mutex_t thread_list;
 //list_head *join_queue;
 //list_head *head_thr_list;
 
+/* thread execution states */
 typedef enum
 {
     INIT = 0,
@@ -45,6 +48,7 @@ typedef enum
 } exec_state_t;
 
 
+/* thread data structure */
 typedef struct _tcb 
 {
     //list_head *list;
@@ -65,7 +69,7 @@ Q_NEW_HEAD(_tcb_list, _tcb);
 
 _tcb_list tcb_list;
 
-
+/* thread create return */
 typedef enum
 {
     THR_ERROR = -1,
@@ -93,8 +97,7 @@ typedef enum
 
 #define MULTI_THREADING_ENABLE()  ( multi_threading = 1 )  
 #define MULTI_THREADING_DISABLE()  ( multi_threading = 0 ;)  
-
-#define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1;)
+#define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1)
 
 void set_cur_stack_base_addr( void *stack_low);
 

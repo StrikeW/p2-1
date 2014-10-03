@@ -1,6 +1,15 @@
 /** @file sem_type.h
- *  @brief This file defines the type for semaphores.
+ *  @brief semaphore data structure
+ *  	   and its associated operations
+ *
+ *
+ *  @author  Yuhang Jiang (yuhangj)
+ *  @author  Subramanian Natarajan (snatara1)
+ *
+ *  @bugs  No known bugs
+ *
  */
+
 
 #ifndef _SEM_TYPE_H
 #define _SEM_TYPE_H
@@ -16,12 +25,15 @@
 
 #define SEM_INIT_SUCC 0 
 
+/* Semaphore data structure */
 typedef struct sem {
 	int status;
 	int count;
 	mutex_t sem_mutex;
 	cond_t sem_cond;
 } sem_t;
+
+/* Function declarations */
 
 int sem_init( sem_t *sem, int count );
 void sem_wait( sem_t *sem );

@@ -1,5 +1,5 @@
 
-
+/*
 #define PAGE_ALIGN(addr) ((addr) & ~ (PAGE_SIZE -1))
 
 #define THR_SIZE_ALIGN(size) \
@@ -14,4 +14,5 @@
 #define MULTI_THREADING_ENABLE()  ( multi_threading = 1 )  
 #define MULTI_THREADING_DISABLE()  ( multi_threading = 0 ;)  
 
-#define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1;)
+#define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1)
+*/

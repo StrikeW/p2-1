@@ -87,7 +87,11 @@ UPDATE_METHOD = afs
 #
 410TESTS = startle agility_drill cat cvar_test cyclone \
 excellent join_specific_test juggle racer mutex_destroy_test \
-paraguay thr_exit_join switzerland nibbles beady_test
+paraguay thr_exit_join switzerland nibbles beady_test \
+actual_wait bistromath getpid_test1 halt_test \
+mandelbrot misbehave misbehave_wrap  wild_test1 \
+multitest rwlock_downgrade_read_test stack_test1 
+
 
 ###########################################################################
 # Test programs you have written which you wish to run
