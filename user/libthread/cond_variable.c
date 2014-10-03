@@ -1,5 +1,6 @@
 /** @file  cond_variable.c
- *  @brief 
+ *  @brief contains functions and code 
+ *  for condition variable implementation 
  *
  *
  *  @author  Yuhang Jiang (yuhangj)
@@ -32,21 +33,19 @@
 int
 cond_init (cond_t * cv)
 {
-   /* TODO: return success failure */
     assert (cv != NULL);
 
-    /*
     if ( cv->status == COND_EXIST) {
         lprintf("Condition variable already exists ");
-	return  0;
+	return COND_VAR_SUCC;
     }
-    */
+    
     spin_lock_init (&cv->spinlock);
     cv->tid = DEFAULT_TID;
     cv->status = COND_EXIST;
 
     Q_INIT_HEAD (&cv->waiting_list);
-    return 0;
+    return COND_VAR_SUCC;
 }
 
 
@@ -101,9 +100,6 @@ cond_destroy (cond_t * cv)
 void
 cond_wait (cond_t * cv, mutex_t * mp)
 {
-   /* TODO: remove DEBUG CMD in condition wait*/
-   /* TODO:remove lprintf and comments */
-
     int status = 0;
     assert (cv != NULL);
     assert (mp != NULL);
@@ -128,27 +124,6 @@ cond_wait (cond_t * cv, mutex_t * mp)
 
     /* Insert into the tail of the waiting list */
     Q_INSERT_TAIL (&cv->waiting_list, node_ptr, cond_link);
-  //lprintf("cond waiting_list addr [%p]",&cv->waiting_list);
-
-#ifdef DEBUG_COND
-  lprintf ("DEBUG COND!");
-  cond_t *tmp = NULL;
-  tmp = Q_GET_FRONT (&cv->waiting_list);
-  while (tmp)
-    {
-      if (tmp == Q_GET_FRONT (&cv->waiting_list))
-	{
-	  lprintf ("Start:tid[%d]addr[%p]->", tmp->tid, tmp);
-	}
-      else
-	{
-	  lprintf ("->tid[%d]addr[%p]", tmp->tid, tmp);
-	}
-      tmp = Q_GET_NEXT (tmp, cond_link);
-    }
-
-#endif
-
 
     /* Release the mutex mp passed in */
     mutex_unlock (mp);
@@ -162,7 +137,6 @@ cond_wait (cond_t * cv, mutex_t * mp)
 
    /* Lock the passed mutex mp again */
    mutex_lock (mp);
-
    return;
 }
 
@@ -237,25 +211,6 @@ cond_broadcast (cond_t * cv)
 
   /* Lock the queue */
   spin_lock_request (&cv->spinlock);
-#ifdef DEBUG_COND
-  lprintf ("DEBUG COND!");
-  cond_t *tmp = NULL;
-  tmp = Q_GET_FRONT (&cv->waiting_list);
-  while (tmp)
-    {
-      if (tmp == Q_GET_FRONT (&cv->waiting_list))
-	{
-	  lprintf ("Start:tid[%d]addr[%p]->", tmp->tid, tmp);
-	}
-      else
-	{
-	  lprintf ("->tid[%d]addr[%p]", tmp->tid, tmp);
-	}
-      tmp = Q_GET_NEXT (tmp, cond_link);
-    }
-
-#endif
-
   while (1)
     {
       /* Wake up all the thread in the queue */
@@ -264,9 +219,10 @@ cond_broadcast (cond_t * cv)
 	{
 	  lprintf ("In cond_broadcast: no threads!");
 	  break;
-	}			/* Remove the node from the waiting list */
+	}		
       else
 	{
+          /* Remove node from waiting list */
 	  Q_REMOVE (&cv->waiting_list, node_ptr, cond_link);
 	  /* Make the thread runnable */
 	  make_runnable (node_ptr->tid);

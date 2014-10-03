@@ -24,7 +24,6 @@ const char *end_msgs[] = {
 };
 
 void format_start(char *buf, int len, int type) {
-    lprintf("subbu");
     snprintf(buf, len, "%s%s%s", TEST_PFX, test_name, start_msgs[type]);
 }
 
@@ -47,11 +46,8 @@ void report_start(int type) {
 }
 
 void report_end(int type) {
-
-    lprintf("in lprintf");
     char buf[256];
     format_end(buf, sizeof(buf), type);
-    lprintf("format_end");
     sim_puts(buf);
 }
 

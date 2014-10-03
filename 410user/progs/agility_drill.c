@@ -176,7 +176,7 @@ int main( int argc, char *argv[] ) {
         printf("Footprint (number of locks acquired at the same time) must be "
                 "at least 1\n");
 	/* don't REPORT anything: abort, attract attention of TA */
-        exit(1);
+        thr_exit((void *)1);
     }
     thrgrp_init_group(&tg);
     mtxs = (mutex_t *)calloc(n_mutexes, sizeof(mutex_t));
@@ -191,5 +191,6 @@ int main( int argc, char *argv[] ) {
     }
 	free(mtxs);
     REPORT_END_SUCCESS; 
-    exit(0);
+    thr_exit((void *)0);
+    exit(99);
 }

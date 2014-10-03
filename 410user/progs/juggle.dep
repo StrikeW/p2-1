@@ -1,0 +1,52 @@
+410user/progs/juggle.o: 410user/progs/juggle.c 410user/libstdio/stdio.h \
+ 410user/inc/stddef.h 410user/inc/types.h 410user/inc/stdarg.h \
+ 410user/inc/rand.h spec/syscall.h spec/ureg.h 410user/libsimics/simics.h \
+ 410user/inc/thread.h user/libthread/thr_internals.h 410user/inc/stdint.h \
+ user/libthread/thr_macros.h 410user/libstdlib/stdlib.h \
+ 410user/inc/malloc.h user/inc/mutex_type.h user/inc/cond_type.h \
+ 410user/inc/assert.h user/inc/variable_queue.h user/inc/spin_lock.h \
+ user/inc/mutex_type.h user/inc/variable_queue.h 410user/inc/mutex.h
+
+410user/libstdio/stdio.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/stdarg.h:
+
+410user/inc/rand.h:
+
+spec/syscall.h:
+
+spec/ureg.h:
+
+410user/libsimics/simics.h:
+
+410user/inc/thread.h:
+
+user/libthread/thr_internals.h:
+
+410user/inc/stdint.h:
+
+user/libthread/thr_macros.h:
+
+410user/libstdlib/stdlib.h:
+
+410user/inc/malloc.h:
+
+user/inc/mutex_type.h:
+
+user/inc/cond_type.h:
+
+410user/inc/assert.h:
+
+user/inc/variable_queue.h:
+
+user/inc/spin_lock.h:
+
+user/inc/mutex_type.h:
+
+user/inc/variable_queue.h:
+
+410user/inc/mutex.h:

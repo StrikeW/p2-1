@@ -366,5 +366,6 @@ int main(int argc, char ** argv)
       printf("Worker thread returned with code %d.\n",retcode);
     }
  
+	thr_exit(0);
 	return 0;
 }

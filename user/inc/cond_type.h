@@ -23,6 +23,11 @@
 #include "spin_lock.h"
 #include "mutex_type.h"
 
+
+/* cond init macros */
+#define COND_VAR_SUCC  0
+#define COND_VAR_FAIL  -1
+
 #define COND_DESTORY 0
 #define COND_EXIST 1
 

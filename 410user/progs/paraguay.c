@@ -123,5 +123,6 @@ int main(void)
 
 	/* Actual success reporting is by the other thread. */
 	sleep(2);
+	thr_exit((void *)failed);
 	return failed;
 }

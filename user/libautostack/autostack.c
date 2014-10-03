@@ -8,7 +8,7 @@
  *  @author  Subramanian Natarajan (snatara1)
  *
  *
- *  @bugs
+ *  @bugs No known bugs
  *
  */
 
@@ -44,7 +44,6 @@ char exception_handler_stack[PAGE_SIZE];
 
 void page_fault_handler(void *arg, ureg_t *ureg)
 {
-    lprintf("IN STACKGROWTH HANDLER");
     if(ureg->cause == SWEXN_CAUSE_PAGEFAULT){
         if( ! IS_MULTI_THREADING_ENABLED() ) {
 
@@ -57,7 +56,6 @@ void page_fault_handler(void *arg, ureg_t *ureg)
             }
 
             cur_stack_base_addr = stack_start;
-            lprintf(" new cur_stack_base_addr = %x", (int) cur_stack_base_addr);
                 if (swexn((void *)(exception_handler_stack + PAGE_SIZE),
             page_fault_handler, NULL, ureg) < 0) 
                 {
@@ -88,7 +86,6 @@ void page_fault_handler(void *arg, ureg_t *ureg)
 void
 install_autostack(void *stack_high, void *stack_low)
 {
-    lprintf ("DEBUG install_autostack start");
     main_thr_high_addr =(uintptr_t) stack_high;
     main_thr_low_addr = (uintptr_t) stack_low;
     SET_STACK_CURR_BASE(THR_PTR_ALIGN(stack_low));
@@ -101,6 +98,5 @@ install_autostack(void *stack_high, void *stack_low)
                         exit(-2);
       }
 
-    lprintf ("DEBUG install_autostack end");
 }
 

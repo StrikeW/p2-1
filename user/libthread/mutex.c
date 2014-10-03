@@ -1,5 +1,5 @@
 /** @file  mutex.c
- *  @brief 
+ *  @brief Implementation of the mutex library
  *
  *  The thread library uses the xchg 
  *  instruction to lock the mutex. 
@@ -46,8 +46,6 @@ extern int atom_xchg (int *, int);
 int
 mutex_init (mutex_t * mp)
 {
-    /* TODO: duplicate init check */
-
     if ( mp->status == MUTEX_EXIST ) {
 	lprintf(" Mutex already initialised");
 	return MUTEXT_INIT_SUCC;
@@ -90,16 +88,13 @@ mutex_lock (mutex_t * mp)
     }
     while (1)
     {
-      //lprintf("before lock: mp->lock:%d", mp->lock);
         /* Lock the mutex with the XCHG instruction */
 	if (atom_xchg (&mp->lock, LOCK) == UNLOCK)
 	{
-	  //      lprintf("Got lock! mp->lock:%d",mp->lock);
 	  break;
 	}
 	else
 	{
-	  //      lprintf("Waiting for lock!");
 	  /* Wait for unlock */
 	  continue;
 	}
@@ -120,7 +115,6 @@ void
 mutex_unlock (mutex_t * mp)
 {
     /* TODO: duplicate unlock check */
-    /* TODO: Remove comments */
     if (mp == NULL)
     {
 	lprintf ("ERROR: Illegal mutex to unlock");
@@ -139,9 +133,8 @@ mutex_unlock (mutex_t * mp)
 void
 mutex_destroy (mutex_t * mp)
 {
-    /* TODO: disallow mutex destroy when locked */
     if ( mp->status == LOCK) {
-	lprintf ("Mutex is locked, UNlock to destroy");
+	lprintf ("Mutex is locked, Unlock to destroy");
 	return;
     }    
 

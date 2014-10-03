@@ -129,10 +129,10 @@ void *juggle(void * n_voidstar)
             }
         }
     }
-    #ifdef PRINT
+#ifdef PRINT
     // Tell that we were successfull.
     putchar((char)n + '0');
-    #endif
+#endif
 
     print_count(n);
 
@@ -206,10 +206,12 @@ int main(int argc, char **argv)
         }
         printf("\n\nSuccess. All balls accounted for.\n");
 
-        #ifdef COUNT_THREADS
+#ifdef COUNT_THREADS
         lprintf("Created and destroyed %d threads so far.\n", th_count);
-        #endif
+#endif
     }
 
-    return 0;
+    thr_exit(0);
+    printf("This is NOT happening!\n");
+    return -30;
 }

@@ -90,7 +90,7 @@ excellent join_specific_test juggle racer mutex_destroy_test \
 paraguay thr_exit_join switzerland nibbles beady_test \
 actual_wait bistromath getpid_test1 halt_test \
 mandelbrot misbehave misbehave_wrap  wild_test1 \
-multitest rwlock_downgrade_read_test stack_test1 
+multitest rwlock_downgrade_read_test stack_test1 largetest
 
 
 ###########################################################################
@@ -104,7 +104,7 @@ STUDENTTESTS = t
 ###########################################################################
 # Object files for your thread library
 ###########################################################################
-THREAD_OBJS = malloc.o panic.o _list.o \
+THREAD_OBJS = malloc.o panic.o thr_join_exit.o \
      thread_fork.o thr_init.o thr_create.o thr_internals.o \
 	 xchg.o mutex.o cond_variable.o spin_lock.o sem.o \
 	 rwlock.o

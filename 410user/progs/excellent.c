@@ -42,20 +42,16 @@ main(int argc, char *argv[])
 	if ((tid = thr_create(worker, (void *)answer)) < 0)
 		panic("HEINOUS: thr_create() failed!");
 
-	
-	printf ("\n tid is  %d", tid);
 	if ((error = thr_join(tid, &tstatus)) != 0)
 		panic("MOST NON-TRIUMPHANT: thr_join() failed!");
 
-	printf("\n status is tstatus=%d, answer = %d", (int)tstatus, answer);
 	if ((int)tstatus != answer)
-		//printf("\n thread join failed\n");
 		panic("BOGUS!!");
-	
-	
-	printf("\n error is %d", error);
+
 	printf("*******************************\n");
 	printf("* Be excellent to each other. *\n");
 	printf("*******************************\n");
-	return (0);
+	thr_exit(0);
+	panic("BOGUS!!");
+	return (99);
 }

@@ -51,5 +51,6 @@ int main()
   do_test();
   report_misc("stack allocation successful");
   report_end(END_SUCCESS);
-  exit(42);
+  thr_exit((void *)42);
+  return(42);
 }

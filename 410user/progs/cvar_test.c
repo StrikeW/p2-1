@@ -141,7 +141,7 @@ int main( int argc, char *argv[] )
 		lprintf("Error in thread Creation!");
 		exit(1);
 	}
-lprintf("before thr_yield(sleeper_tid: %d)\n",sleeper_tid);
+
 	thr_yield(sleeper_tid);
 
 	for (i=0;i<NR_MANIACS;++i) {
@@ -157,10 +157,7 @@ lprintf("before thr_yield(sleeper_tid: %d)\n",sleeper_tid);
                 lprintf("Error in thread Creation!");
                 exit(1);
         }
-
-lprintf("before thr_yield(instigator_tid: %d)\n",instigator_tid);
-
-    thr_yield(instigator_tid);
+	thr_yield(instigator_tid);
 
 	
 	for (i=0;i<NR_MANIACS; ++i)

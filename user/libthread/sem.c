@@ -1,5 +1,5 @@
 /** @file  sem.c
- *  @brief 
+ *  @brief semaphore library implementation 
  *
  *
  *  @author  Yuhang Jiang (yuhangj)

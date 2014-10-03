@@ -22,12 +22,11 @@ int main(int argc, char *argv[])
 	int *wild = (int *)0x31337000;
 
 	REPORT_START_ABORT;
-	lprintf("SUBBU!");
+	
 
 	*wild = 0x2badd00d;
-	lprintf("RSUBBU!");
 
-  //REPORT_END_FAIL;
+  REPORT_END_FAIL;
 
 	exit( -1 );
 }

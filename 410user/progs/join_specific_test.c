@@ -82,8 +82,7 @@ int main(int argc, char **argv)
 					free(curArg);
 				}
 		}
-	lprintf("SUCCESS!!!");
-	return 0;
-	
-}
 
+	thr_exit(0);
+	return 0;
+}

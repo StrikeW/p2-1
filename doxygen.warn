@@ -1,0 +1,168 @@
+Notice: Output directory `./doc' does not exist. I have created it for you.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:56: Warning: Compound free_stack_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:67: Warning: Compound _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/spin_lock.h:20: Warning: Compound spinlock_t is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:49: Warning: Compound stack_free_list_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:33: Warning: Compound mutex is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:29: Warning: Compound sem is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:42: Warning: Compound cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:21: Warning: Compound rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libautostack/autostack.c:22: Warning: Member ALIGN_ADDR(addr) (define) of file autostack.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libautostack/autostack.c:24: Warning: Member exception_handler_stack[PAGE_SIZE] (variable) of file autostack.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libautostack/autostack.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:28: Warning: Member COND_VAR_SUCC (define) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:29: Warning: Member COND_VAR_FAIL (define) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:31: Warning: Member COND_DESTORY (define) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:32: Warning: Member COND_EXIST (define) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:34: Warning: Member DEFAULT_TID (define) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:50: Warning: Member cond_t (typedef) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:38: Warning: Member Q_NEW_HEAD(waiting_list_t, cond) (function) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:58: Warning: Member cond_broadcast(cond_t *cv) (function) of file cond_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/spin_lock.h:8: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/cond_variable.c:208: Warning: Member cond_broadcast(cond_t *cv) (function) of file cond_variable.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/cond_variable.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:21: Warning: Member __malloc_lock_init (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:22: Warning: Member __calloc_lock_init (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:23: Warning: Member __realloc_lock_init (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:24: Warning: Member __free_lock_init (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:26: Warning: Member __malloc_lock (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:27: Warning: Member __calloc_lock (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:28: Warning: Member __realloc_lock (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:29: Warning: Member __free_lock (variable) of file malloc.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:52: Warning: argument 'none' of command @param is not found in the argument list of __check_calloc_lock_init()
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:91: Warning: argument 'none' of command @param is not found in the argument list of __check_free_lock_init()
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:31: Warning: argument 'none' of command @param is not found in the argument list of __check_malloc_lock_init()
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:72: Warning: argument 'none' of command @param is not found in the argument list of __check_realloc_lock_init()
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:128: Warning: argument 'none' of command @param is not found in the argument list of calloc(size_t __nelt, size_t __eltsize)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:128: Warning: The following parameters of calloc(size_t __nelt, size_t __eltsize) are not documented:
+  parameter '__nelt'
+  parameter '__eltsize'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:162: Warning: argument 'none' of command @param is not found in the argument list of free(void *__buf)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:162: Warning: The following parameters of free(void *__buf) are not documented:
+  parameter '__buf'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:111: Warning: argument 'none' of command @param is not found in the argument list of malloc(size_t __size)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:111: Warning: The following parameters of malloc(size_t __size) are not documented:
+  parameter '__size'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:145: Warning: argument 'none' of command @param is not found in the argument list of realloc(void *__buf, size_t __new_size)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/malloc.c:145: Warning: The following parameters of realloc(void *__buf, size_t __new_size) are not documented:
+  parameter '__buf'
+  parameter '__new_size'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/mutex.c:31: Warning: Member atom_xchg(int *, int) (function) of file mutex.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.c:21: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.c:26: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:17: Warning: Member LOCK (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:18: Warning: Member UNLOCK (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:21: Warning: Member MUTEXT_INIT_SUCC (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:22: Warning: Member MUTEXT_INIT_FAIL (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:26: Warning: Member MUTEX_DESTORY (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:27: Warning: Member MUTEX_EXIST (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:29: Warning: Member MUTEXT_DEFAULT_TID (define) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:36: Warning: Member mutex_t (typedef) of file mutex_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/rwlock.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:12: Warning: Member RWLOCK_INIT_FAIL (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:13: Warning: Member RWLOCK_INIT_SUCC (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:15: Warning: Member RWLOCK_EXIST (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:16: Warning: Member RWLOCK_DESTROY (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:18: Warning: Member RWLOCK_READ (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:19: Warning: Member RWLOCK_WRITE (define) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:30: Warning: Member rwlock_t (typedef) of file rwlock_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/sem.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:20: Warning: Member SEM_DESTROY (define) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:21: Warning: Member SEM_EXIST (define) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:23: Warning: Member MUTEX_INIT_ERROR (define) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:24: Warning: Member CONDV_INIT_ERROT (define) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:26: Warning: Member SEM_INIT_SUCC (define) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:34: Warning: Member sem_t (typedef) of file sem_type.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/spin_lock.c:18: Warning: Member atom_xchg(int *, int) (function) of file spin_lock.c is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/spin_lock.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:75: Warning: argument 'void' of command @param is not found in the argument list of fork_child_handler(void *(*func)(void *), void *arg, tcb_t *curr_tcb)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:20: Warning: argument 'void' of command @param is not found in the argument list of thr_create(void *(*func)(void *), void *args)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:121: Warning: argument 'void' of command @param is not found in the argument list of thr_getid(void)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_init.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:52: Warning: Member stack_free_list_addr_t (typedef) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:60: Warning: Member free_stack_addr_t (typedef) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:79: Warning: Member tcb_t (typedef) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:39: Warning: Member exec_state_t (enumeration) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:87: Warning: Member thr_err_t (enumeration) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:81: Warning: Member Q_NEW_HEAD(_tcb_list, _tcb) (function) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:94: Warning: Member set_cur_stack_base_addr(void *stack_low) (function) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:97: Warning: Member ret_free_stack_addr() (function) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:98: Warning: Member store_free_stack_addr(uintptr_t addr) (function) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:99: Warning: Member thread_fork(uintptr_t stack_base, void *(*func)(void *), void *arg, tcb_t *curr_tcb) (function) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:27: Warning: Member cur_stack_base_addr (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:28: Warning: Member main_thr_high_addr (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:29: Warning: Member main_thr_low_addr (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:31: Warning: Member multi_threading (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:32: Warning: Member thread_stack_size (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:33: Warning: Member parent (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:35: Warning: Member thread_list (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:62: Warning: Member header (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:83: Warning: Member tcb_list (variable) of file thr_internals.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.c:19: Warning: argument 'none' of command @param is not found in the argument list of construct_tcb()
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:101: Warning: argument 'exit' of command @param is not found in the argument list of thr_exit(void *status)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:101: Warning: The following parameters of thr_exit(void *status) are not documented:
+  parameter 'status'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:15: Warning: argument 'exit' of command @param is not found in the argument list of thr_join(int tid, void **statusp)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:15: Warning: The following parameters of thr_join(int tid, void **statusp) are not documented:
+  parameter 'statusp'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:17: Warning: Member THR_JOIN_FAILED (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:18: Warning: Member DEFAULT_TID (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:19: Warning: Member DEFAULT_JOIN_TID (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:21: Warning: Member THR_JOIN_FAIL (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:22: Warning: Member THR_JOIN_SUCC (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:24: Warning: Member PAGE_ALIGN(addr) (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:27: Warning: Member THR_SIZE_ALIGN(size) (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:29: Warning: Member THR_PTR_ALIGN(ptr) (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:31: Warning: Member SET_STACK_CURR_BASE(addr) (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:33: Warning: Member GET_STACK_CURR_BASE(addr) (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:35: Warning: Member MULTI_THREADING_ENABLE() (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:36: Warning: Member MULTI_THREADING_DISABLE() (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:37: Warning: Member IS_MULTI_THREADING_ENABLED() (define) of file thr_macros.h is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_macros.h:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thread.h:4: Warning: Found unknown command `\bugs'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:75: Warning: argument 'void' of command @param is not found in the argument list of fork_child_handler(void *(*func)(void *), void *arg, tcb_t *curr_tcb)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:20: Warning: argument 'void' of command @param is not found in the argument list of thr_create(void *(*func)(void *), void *args)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:101: Warning: argument 'exit' of command @param is not found in the argument list of thr_exit(void *status)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_join_exit.c:101: Warning: The following parameters of thr_exit(void *status) are not documented:
+  parameter 'status'
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_create.c:121: Warning: argument 'void' of command @param is not found in the argument list of thr_getid(void)
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:78: Warning: Member Q_NEW_LINK(_tcb) tcb_link (function) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:68: Warning: Member tid (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:69: Warning: Member parentid (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:70: Warning: Member join_tid (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:71: Warning: Member exit_status (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:73: Warning: Member stack_start_addr (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:74: Warning: Member state (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:76: Warning: Member join_cond (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:77: Warning: Member join_exit_mtx (variable) of class _tcb is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:43: Warning: Member Q_NEW_LINK(cond) cond_link (function) of class cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:44: Warning: Member spinlock (variable) of class cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:45: Warning: Member tid (variable) of class cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:46: Warning: Member status (variable) of class cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/cond_type.h:49: Warning: Member waiting_list (variable) of class cond is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:57: Warning: Member next (variable) of class free_stack_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:58: Warning: Member prev (variable) of class free_stack_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:59: Warning: Member free_addr (variable) of class free_stack_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:34: Warning: Member lock (variable) of class mutex is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/mutex_type.h:35: Warning: Member status (variable) of class mutex is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:22: Warning: Member status (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:23: Warning: Member read_cnt (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:24: Warning: Member write_cnt (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:25: Warning: Member rd_cnt_mtx (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:26: Warning: Member wr_cnt_mtx (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:27: Warning: Member rd_cond (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:28: Warning: Member wr_cond (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/rwlock_type.h:29: Warning: Member wait_rd_cond (variable) of class rwlock is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:30: Warning: Member status (variable) of class sem is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:31: Warning: Member count (variable) of class sem is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:32: Warning: Member sem_mutex (variable) of class sem is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/sem_type.h:33: Warning: Member sem_cond (variable) of class sem is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/inc/spin_lock.h:21: Warning: Member lock (variable) of class spinlock_t is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:50: Warning: Member size (variable) of class stack_free_list_addr is not documented.
+/afs/andrew.cmu.edu/usr1/snatara1/private/410/new7/p2/user/libthread/thr_internals.h:51: Warning: Member link (variable) of class stack_free_list_addr is not documented.

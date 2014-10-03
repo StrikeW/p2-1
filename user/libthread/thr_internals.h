@@ -6,7 +6,7 @@
  *  @author  Subramanian Natarajan (snatara1)
  *
  *
- *  @bugs
+ *  @bugs No known bugs
  *
  */
 
@@ -18,7 +18,6 @@
 #include <simics.h>
 #include <thr_macros.h>
 #include <syscall.h>
-#include <_list.h>
 #include <stdlib.h>
 #include "mutex_type.h"
 #include "cond_type.h"
@@ -91,27 +90,6 @@ typedef enum
     THR_ENOMEM,
     THR_FORK_ERROR
 } thr_err_t;
-
-#define DEFAULT_TID -1
-#define DEFAULT_JOIN_TID -2
-
-#define THR_JOIN_FAIL -1
-#define THR_JOIN_SUCC 0
-
-#define PAGE_ALIGN(addr) ((addr) & ~ (PAGE_SIZE -1))
-
-#define THR_SIZE_ALIGN(size) \
-    ( ( (unsigned int)(size) + (PAGE_SIZE-1) ) & ~(PAGE_SIZE-1))
-
-#define THR_PTR_ALIGN(ptr) (((uintptr_t) (ptr)) & ~(PAGE_SIZE-1) )
-
-#define SET_STACK_CURR_BASE(addr) (cur_stack_base_addr = (uintptr_t) (addr) )
-
-#define GET_STACK_CURR_BASE(addr) (cur_stack_base_addr)
-
-#define MULTI_THREADING_ENABLE()  ( multi_threading = 1 )  
-#define MULTI_THREADING_DISABLE()  ( multi_threading = 0 )  
-#define IS_MULTI_THREADING_ENABLED() ( multi_threading == 1)
 
 void set_cur_stack_base_addr( void *stack_low);
 
