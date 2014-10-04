@@ -1,0 +1,48 @@
+user/libthread/spin_lock.o: user/libthread/spin_lock.c \
+ 410user/libstdio/stdio.h 410user/inc/stddef.h 410user/inc/types.h \
+ 410user/inc/stdarg.h 410user/libstdlib/stdlib.h 410user/inc/malloc.h \
+ 410user/inc/assert.h user/libthread/thr_internals.h 410user/inc/stdint.h \
+ 410user/libsimics/simics.h spec/syscall.h spec/ureg.h \
+ user/libthread/thr_macros.h user/inc/mutex_type.h user/inc/cond_type.h \
+ user/inc/variable_queue.h user/inc/spin_lock.h user/inc/mutex_type.h \
+ user/inc/variable_queue.h user/inc/spin_lock.h
+
+410user/libstdio/stdio.h:
+
+410user/inc/stddef.h:
+
+410user/inc/types.h:
+
+410user/inc/stdarg.h:
+
+410user/libstdlib/stdlib.h:
+
+410user/inc/malloc.h:
+
+410user/inc/assert.h:
+
+user/libthread/thr_internals.h:
+
+410user/inc/stdint.h:
+
+410user/libsimics/simics.h:
+
+spec/syscall.h:
+
+spec/ureg.h:
+
+user/libthread/thr_macros.h:
+
+user/inc/mutex_type.h:
+
+user/inc/cond_type.h:
+
+user/inc/variable_queue.h:
+
+user/inc/spin_lock.h:
+
+user/inc/mutex_type.h:
+
+user/inc/variable_queue.h:
+
+user/inc/spin_lock.h:
